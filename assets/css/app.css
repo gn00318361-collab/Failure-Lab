@@ -1,13 +1,55 @@
 
-:root{--navy:#14213d;--cream:#f4efe4;--gold:#b18a4b;--ink:#18233a}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,"Noto Sans TC",sans-serif;background:var(--cream);color:var(--ink)}
-.wrap{max-width:1050px;margin:auto;padding:36px 20px}.k{letter-spacing:.14em;font-weight:900;color:#9a7540;font-size:13px}
-h1{font-size:clamp(36px,6vw,72px);line-height:1.02;margin:10px 0 18px}h2{font-size:28px}
-p{font-size:18px;line-height:1.7}.hero{min-height:90vh;display:flex;align-items:center}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}.card,.note,.lecture{background:white;border-radius:20px;padding:22px;box-shadow:0 8px 28px #0000000d}
-a.card{text-decoration:none;color:inherit}.card:hover{transform:translateY(-2px)}button,.btn{display:inline-block;border:0;border-radius:999px;padding:13px 18px;background:var(--navy);color:white;font-weight:800;cursor:pointer;text-decoration:none}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.plantTray{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
-.plantCard{background:#fff;border-radius:16px;padding:8px;border:2px solid transparent;cursor:grab;box-shadow:0 8px 24px #0002}.plantCard img{width:100%;height:130px;object-fit:cover;border-radius:11px;display:block}.plantCard strong{display:block;padding:9px 4px 5px}
-.seasonGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.seasonBox{min-height:185px;border:2px dashed #14213d44;border-radius:18px;padding:10px}.seasonBox h3{color:#9a7540}.seasonBox .plantCard img{height:75px}
-input[type=range]{width:100%}.color{height:260px;border-radius:24px;margin:22px 0}.dbok{color:#426756;font-weight:800}
-@media(max-width:720px){.grid,.plantTray{grid-template-columns:1fr}.seasonGrid{grid-template-columns:1fr 1fr}.wrap{padding:24px 14px}h1{font-size:42px}}
+:root{
+ --navy:#0c1930;--navy2:#122540;--cream:#f3eee4;--paper:#fbf8f1;
+ --gold:#c3a268;--gold2:#8f7448;--ink:#172033;--muted:#6f746f;
+ --line:rgba(195,162,104,.28)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--cream);color:var(--ink)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(#826e4b 0.55px,transparent .55px);background-size:8px 8px}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto;padding:48px 0;position:relative}
+.k{font-size:12px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)}
+h1{font-family:Georgia,"Noto Serif TC",serif;font-size:clamp(44px,7vw,88px);line-height:.98;letter-spacing:-.04em;margin:14px 0 22px}
+h2{font-family:Georgia,"Noto Serif TC",serif;font-size:clamp(24px,3vw,34px);margin:8px 0 10px}
+p{font-size:17px;line-height:1.8}
+.hero{min-height:100svh;display:flex;align-items:center;padding-top:76px;padding-bottom:76px}
+.hero:after{content:"01—04";position:absolute;right:0;top:54px;font-family:Georgia,serif;font-size:14px;letter-spacing:.2em;color:#8d826f}
+.lead{max-width:650px;font-size:20px;color:#545a5a;margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{position:relative;min-height:210px;background:rgba(251,248,241,.86);border:1px solid rgba(23,32,51,.09);border-radius:4px;padding:28px 30px;box-shadow:0 18px 50px rgba(19,29,43,.06);overflow:hidden;transition:.25s ease}
+a.card{text-decoration:none;color:inherit}
+.card:before{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:var(--gold);transform:scaleY(0);transform-origin:bottom;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 60px rgba(19,29,43,.11);border-color:var(--line)}
+.card:hover:before{transform:scaleY(1)}
+.card .num{font-family:Georgia,serif;font-size:12px;letter-spacing:.15em;color:var(--gold2)}
+.card p{color:#6a6e6d;margin-bottom:0}
+.icon{font-size:26px;filter:grayscale(1);opacity:.72}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+button,.btn{appearance:none;border:1px solid var(--navy);border-radius:2px;padding:13px 18px;background:var(--navy);color:#fff;font-weight:800;letter-spacing:.02em;cursor:pointer;text-decoration:none;transition:.2s}
+button:hover,.btn:hover{background:var(--navy2);transform:translateY(-1px)}
+.btn.secondary{background:transparent;color:var(--navy)}
+.labhead{border-bottom:1px solid rgba(23,32,51,.14);padding-bottom:24px;margin-bottom:34px}
+.note,.lecture{background:var(--paper);border:1px solid rgba(23,32,51,.09);border-left:3px solid var(--gold);border-radius:3px;padding:22px 24px;margin:20px 0;box-shadow:0 12px 35px rgba(20,30,45,.05)}
+.dbok{color:#456b5c;font-weight:850}
+.color{height:min(310px,40vh);border-radius:3px;margin:24px 0;box-shadow:0 18px 50px #0001}
+input[type=range]{width:100%;accent-color:var(--navy);margin:22px 0}
+.plantTray{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+.plantCard{background:var(--paper);border-radius:3px;padding:7px;border:1px solid rgba(23,32,51,.11);cursor:grab;box-shadow:0 10px 25px #0000000b;transition:.2s}
+.plantCard:hover{transform:translateY(-2px);border-color:var(--gold)}
+.plantCard img{width:100%;height:145px;object-fit:cover;border-radius:2px;display:block}
+.plantCard strong{display:block;padding:11px 6px 7px;font-size:16px}
+.seasonGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}
+.seasonBox{min-height:200px;border:1px dashed #887b66;border-radius:3px;padding:10px;background:rgba(255,255,255,.28)}
+.seasonBox h3{text-align:center;font-family:Georgia,"Noto Serif TC",serif;color:var(--gold2);font-size:22px;margin:5px}
+.seasonBox .plantCard{margin-top:8px}.seasonBox .plantCard img{height:72px}
+textarea{border:1px solid rgba(23,32,51,.18)!important;background:var(--paper);border-radius:3px!important;outline:none}
+textarea:focus{border-color:var(--gold)!important}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:38px}
+.back{color:var(--navy);text-decoration:none;font-weight:800;font-size:14px}
+@media(max-width:760px){
+ .wrap{width:min(100% - 28px,1120px);padding:28px 0}.hero{padding-top:50px}
+ .grid{grid-template-columns:1fr}.card{min-height:170px;padding:23px}
+ .plantTray{grid-template-columns:repeat(2,1fr)}.seasonGrid{grid-template-columns:1fr 1fr}
+ h1{font-size:46px}.lead{font-size:17px}.hero:after{display:none}
+}

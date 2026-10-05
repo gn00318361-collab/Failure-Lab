@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>錯誤有多遠？</title><link rel="stylesheet" href="../assets/css/app.css"></head><body><main class="wrap"><div id="app"></div></main><script src="../assets/js/db.js"></script><script>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>錯誤有多遠？</title><link rel="stylesheet" href="../assets/css/app.css"></head><body><main class="wrap"><div class="topbar"><a class="back" href="../index.html">← FAILURE LAB</a><div class="k">先經歷，再理解</div></div><div id="app"></div></main><script src="../assets/js/db.js"></script><script>
 const app=document.getElementById('app');let target=Math.floor(Math.random()*360),e1=0;
 const cd=(a,b)=>{let d=Math.abs(a-b)%360;return Math.round(Math.min(d,360-d))};
 function start(){app.innerHTML='<div class="k">LAB #01</div><h1>記住這個顏色。</h1><div class="color" style="background:hsl('+target+' 70% 55%)"></div><p>3 秒後會消失。</p>';setTimeout(recall1,3000)}
