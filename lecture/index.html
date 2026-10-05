@@ -1,0 +1,1703 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>失敗學 V2｜71 張完整講座</title><style>:root{--ivory:#F4F0E8;--navy:#14213D;--gold:#B28A4A}*{box-sizing:border-box}body{margin:0;background:#050607;color:var(--ivory);font-family:'Microsoft JhengHei','Noto Sans TC',sans-serif;overflow:hidden}#stage{height:100vh;width:100vw;display:flex;align-items:center;justify-content:center;overflow:hidden}#stage>svg{display:block;width:min(100vw,177.7778vh);height:min(100vh,56.25vw);flex:none;overflow:hidden}button,input{font:inherit}button{cursor:pointer}#controls{position:fixed;bottom:7px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;padding:8px 10px;background:#0a1018e8;border:1px solid #55616c;border-radius:5px;transition:opacity .2s;opacity:0;z-index:10;white-space:nowrap}body.show-controls #controls,#controls:hover,#controls:focus-within{opacity:1}#controls button{background:transparent;color:#e8e5dc;border:0;padding:5px 8px}#controls button:disabled{opacity:.3;cursor:default}#controls input{width:44px;color:var(--ivory);background:transparent;border:0;text-align:center;font-size:15px}body.ending #controls{display:none}#notes{position:fixed;right:0;top:0;width:min(540px,90vw);height:100vh;overflow:auto;background:#f4f0e8;color:#252525;padding:32px;z-index:20;box-shadow:-8px 0 35px #0004}#notes p{line-height:1.9}#notes h3{color:#53677a;font-size:13px;letter-spacing:2px;margin-bottom:8px}#notes a{overflow-wrap:anywhere;color:#53677a}.close{float:right;border:0;background:transparent;color:inherit;padding:8px;font-size:15px}dialog{color:#252525;background:var(--ivory);border:0;padding:30px;max-height:90vh;max-width:90vw}dialog::backdrop{background:#000b}#grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:min(1100px,80vw)}#grid button{background:transparent;color:var(--navy);border:1px solid #c1b9a9;padding:18px;text-align:left;line-height:1.5}#grid button.active{border:2px solid var(--gold)}#grid small{display:block;color:#8b754e;font-size:12px}#feedback{position:fixed;left:50%;top:52%;transform:translate(-50%,-50%);padding:24px 40px;background:var(--ivory);color:var(--navy);border:2px solid var(--gold);font-size:22px;box-shadow:0 12px 70px #0003;z-index:12;max-width:80vw;line-height:1.8}#feedback button{display:block;margin:16px auto 0;border:1px solid var(--gold);padding:8px 20px;background:transparent}.choice{cursor:pointer}.choice:hover>rect,.choice:focus>rect{fill:#53677A}.choice:focus{outline:none}.reveal-under{animation:reveal 1.5s ease both}.parcel-lid{animation:reveal .7s both}.data-paper{animation:reveal .7s .5s both}.mirror-arrive{animation:reveal .8s 1s both}.alternate-route{animation:reveal 1.8s ease both}.first-step{animation:reveal 1.8s ease both}.strike-line{stroke-dasharray:1500;stroke-dashoffset:0;animation:draw 1.2s ease both}.compass-needle{animation:needle 2s ease-out both}.wiper{transform-origin:654px 557px;animation:wipe 3.4s ease-in-out both}.rain-veil.clearing{animation:clearRain 3.4s ease-in-out both}@keyframes reveal{from{opacity:0}to{opacity:1}}@keyframes draw{from{stroke-dashoffset:1500}to{stroke-dashoffset:0}}@keyframes needle{from{transform:rotate(-135deg)}to{transform:rotate(0)}}@keyframes wipe{0%{transform:rotate(-70deg)}30%{transform:rotate(10deg)}60%{transform:rotate(-70deg)}100%{transform:rotate(10deg)}}@keyframes clearRain{0%{opacity:1}35%{opacity:.8}65%{opacity:.5}100%{opacity:.16}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rain-veil.clearing{opacity:.16}}#printDeck{display:none}.presenter #stage{position:fixed;left:0;top:0;width:58vw;height:65vh}.presenter #stage>svg{width:58vw;height:32.625vw}.presenter #notes{width:40vw;display:block}.presenter #controls{left:29%;opacity:1;bottom:50px;max-width:58vw;flex-wrap:wrap}.presenter.ending #controls{display:flex}@media(max-width:800px){#controls{gap:0;padding:4px;max-width:96vw;flex-wrap:wrap;justify-content:center;font-size:12px}#grid{grid-template-columns:repeat(2,1fr)}}@media print{@page{size:16in 9in;margin:0}body{background:white;overflow:visible}#stage,#controls,#notes,dialog,#feedback{display:none!important}#printDeck{display:block}#printDeck svg{display:block;width:16in;height:9in;page-break-after:always;break-after:page;overflow:hidden}#printDeck svg:last-child{page-break-after:auto;break-after:auto}*{animation:none!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+/* On slide 23, attention shifts to the mirror while the data drifts downward. */
+svg[data-slide="23"] .mirror-arrive{transform-box:fill-box;transform-origin:center;animation:mirrorFocus 2.1s ease both}
+svg[data-slide="23"] .data-paper{transform-box:fill-box;transform-origin:center;animation:dataFalls 2.1s ease both}
+@keyframes mirrorFocus{0%{opacity:.3;transform:scale(.86)}100%{opacity:1;transform:scale(1.12)}}
+@keyframes dataFalls{0%{transform:translateY(0);opacity:1}100%{transform:translateY(110px) scale(.72);opacity:.8}}
+</style></head><body><main id="stage" aria-label="簡報投影片"></main><div id="controls" aria-label="簡報控制"><button id="prev" title="上一頁 ←">←</button><label><input id="page" type="number" min="1" max="71" value="1" aria-label="跳至頁碼"> / 71</label><button id="next" title="下一頁 →">→</button><button id="gridButton" title="總覽 G">總覽</button><button id="notesButton" title="講稿 N">講稿</button><button id="presenterButton" title="另開講者視窗 P">講者視窗</button><button id="fullButton" title="全螢幕 F">全螢幕</button><button id="helpButton" title="快捷鍵 H">?</button></div><aside id="notes" hidden aria-label="講者講稿"><button class="close" data-close="notes">關閉 ×</button><div id="notesBody"></div></aside><dialog id="overview"><button class="close" data-close="overview">關閉 ×</button><h2>失敗學 · 71 張</h2><div id="grid"></div></dialog><dialog id="help"><button class="close" data-close="help">關閉 ×</button><h2>播放方式</h2><p>← → / 空白鍵：換頁<br>Home / End：第一頁／第71頁<br>F：全螢幕<br>N：顯示或收起講稿<br>P：另開講者視窗<br>G：頁面總覽<br>R：重播當頁動畫<br>H：快捷鍵<br>Esc：收起面板</p><p>最後一頁不會循環回封面。列印可輸出全套 71 頁 PDF。</p></dialog><div id="feedback" hidden></div><section id="printDeck" aria-hidden="true"></section><script>window.DECK_DATA = [
+  {
+    "id": 1,
+    "kind": "cover",
+    "title": [
+      "失 敗 學"
+    ],
+    "body": [
+      "不是教你不要失敗，",
+      "而是教你怎麼使用失敗。"
+    ],
+    "visual": "footprint",
+    "stage": 0,
+    "originalTitle": "系列主封面 (全黑背景)",
+    "notes": {
+      "OPEN": "你最近一次失敗，是什麼時候？今天，我們練習怎麼使用它。",
+      "STORY": "今天不把挫敗美化成必然的成長。我們要練習辨認其中的資訊，再決定要往哪裡走。",
+      "POINT": "不是教你不要失敗，；而是教你怎麼使用失敗。",
+      "TRANSITION": "接著進入：從受挫到重啟。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 2,
+    "kind": "journey",
+    "title": [
+      "從受挫到重啟"
+    ],
+    "body": [
+      "看見",
+      "承受",
+      "讀懂",
+      "判斷",
+      "選擇",
+      "行動"
+    ],
+    "visual": "journey",
+    "stage": 0,
+    "originalTitle": "全局學習路徑 (米白背景)",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：從受挫到重啟",
+      "STORY": "這是課程整合的實用流程，不是經實驗驗證的單一路徑。第二講先揭露讀懂的障礙，第三講處理情緒後再回到資料；實際運用可以往返。",
+      "POINT": "看見；承受；讀懂；判斷；選擇；行動",
+      "TRANSITION": "接著進入：01 看見失敗。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 3,
+    "kind": "chapter",
+    "title": [
+      "01 看見失敗"
+    ],
+    "body": [
+      "你以為只有你一直失敗"
+    ],
+    "visual": "iceberg",
+    "stage": 0,
+    "originalTitle": "第一講封面",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：01 看見失敗",
+      "STORY": "請想起一位看似一路順遂的人。我們今天先不判斷能力，先檢查自己究竟看見了多少資訊。",
+      "POINT": "你以為只有你一直失敗",
+      "TRANSITION": "接著進入：那些看起來順遂的人，真的比較少失敗嗎？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 4,
+    "kind": "question",
+    "title": [
+      "那些看起來順遂的人，",
+      "真的比較少失敗嗎？"
+    ],
+    "body": [],
+    "visual": "balance",
+    "stage": 0,
+    "originalTitle": "開場發問",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：那些看起來順遂的人，真的比較少失敗嗎？",
+      "STORY": "讓現場舉手或默想。先保留答案，不預設每個人的經歷都一樣。看起來少失敗，也可能只是你看見的片段比較少。",
+      "POINT": "那些看起來順遂的人，真的比較少失敗嗎？",
+      "TRANSITION": "接著進入：我們看見的，經過選擇。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 5,
+    "kind": "contrast",
+    "title": [
+      "我們看見的，經過選擇"
+    ],
+    "body": [
+      "公開的結果",
+      "錄取、得獎、出版"
+    ],
+    "visual": "hidden",
+    "stage": 0,
+    "originalTitle": "社群網絡的精華濾鏡",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：我們看見的，經過選擇",
+      "STORY": "另一側是未公開的經過：沒有回音的申請、改了又改的稿件。這是日常例子，不能推論每個人或每個社群平台都一樣。",
+      "POINT": "公開的結果；錄取、得獎、出版",
+      "TRANSITION": "接著進入：你看到的，只是水面。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 6,
+    "kind": "hero",
+    "title": [
+      "你看到的，只是水面。"
+    ],
+    "body": [],
+    "visual": "iceberg",
+    "stage": 0,
+    "originalTitle": "Hero Visual 01：冰山全景圖",
+    "notes": {
+      "OPEN": "先別急著讀字，看看水面下還有多少東西。",
+      "STORY": "留十秒讓觀眾看見海面下的巨大體積。冰山是視覺隱喻，沒有實證百分比，也沒有編造拒絕次數。岸邊主角還沒有看見全貌。",
+      "POINT": "你看到的，只是水面。",
+      "TRANSITION": "接著進入：兩種訊號，不一樣大聲。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 7,
+    "kind": "signals",
+    "title": [
+      "兩種訊號，不一樣大聲"
+    ],
+    "body": [
+      "成功被看見",
+      "挫折未必被說出"
+    ],
+    "visual": "signals",
+    "stage": 0,
+    "originalTitle": "資訊不對稱架構",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：兩種訊號，不一樣大聲",
+      "STORY": "可見性與發生頻率不同。公開的成就容易留下紀錄，私人挫折可能沒有被分享。不是所有失敗都被隱藏，也不是所有成功都被放大。",
+      "POINT": "成功被看見；挫折未必被說出",
+      "TRANSITION": "接著進入：大家都以為，只有自己不安。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 8,
+    "kind": "research",
+    "title": [
+      "大家都以為，只有自己不安"
+    ],
+    "body": [
+      "私下的感受",
+      "不等於外表的從容"
+    ],
+    "visual": "crowd",
+    "stage": 0,
+    "originalTitle": "核心研究：Failure Gap 與多元無知",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：大家都以為，只有自己不安",
+      "STORY": "多元無知指人們錯估他人的私下想法或感受。這裡將概念應用於失敗的孤獨感，並非原文驗證過的「失敗鴻溝」量表或所有人都在偽裝。",
+      "POINT": "私下的感受；不等於外表的從容",
+      "TRANSITION": "接著進入：一份把遺漏補回來的履歷。",
+      "SOURCE": "Miller, D. T., & McFarland, C. (1991). When social comparison goes awry: The case of pluralistic ignorance. In J. Suls & T. A. Wills (Eds.), Social comparison: Contemporary theory and research (pp. 287–313). Lawrence Erlbaum Associates. https://www.gsb.stanford.edu/faculty-research/publications/when-social-comparison-goes-awry-case-pluralistic-ignorance"
+    },
+    "citation": "Miller & McFarland, 1991 · Social Comparison（書籍章節）",
+    "sourceId": "plural"
+  },
+  {
+    "id": 9,
+    "kind": "document",
+    "title": [
+      "一份把遺漏補回來的履歷"
+    ],
+    "body": [
+      "CV OF FAILURES",
+      "未錄取、未獲獎、被退稿"
+    ],
+    "visual": "cv",
+    "stage": 0,
+    "originalTitle": "學術案例：Hidden Failures",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：一份把遺漏補回來的履歷",
+      "STORY": "Haushofer 在2016年公開個人失敗履歷，當時任職普林斯頓。他也說明受到 Melanie Stefan 啟發。這是個人案例，不能推導學界平均退稿次數。",
+      "POINT": "CV OF FAILURES；未錄取、未獲獎、被退稿",
+      "TRANSITION": "接著進入：失敗為什麼沒有被說出？。",
+      "SOURCE": "Haushofer, J. (2016). CV of failures [Personal curriculum vitae]. https://johanneshaushofer.com/Johannes_Haushofer_CV_of_Failures.pdf"
+    },
+    "citation": "Haushofer, 2016 · CV of Failures（個人文件）",
+    "sourceId": "cv"
+  },
+  {
+    "id": 10,
+    "kind": "three",
+    "title": [
+      "失敗為什麼沒有被說出？"
+    ],
+    "body": [
+      "怕被評價",
+      "故事偏愛結果",
+      "環境不鼓勵試錯"
+    ],
+    "visual": "silence",
+    "stage": 0,
+    "originalTitle": "為什麼失敗總是被隱蔽？",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：失敗為什麼沒有被說出？",
+      "STORY": "這三點是供討論的可能因素，不是演化必然論。邀請聽眾想想自己的環境：哪些挫折可以說，哪些說了會被貼標籤？",
+      "POINT": "怕被評價；故事偏愛結果；環境不鼓勵試錯",
+      "TRANSITION": "接著進入：別拿自己的幕後花絮，去比別人的預告片。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 11,
+    "kind": "film",
+    "title": [
+      "別拿自己的幕後花絮，",
+      "去比別人的預告片。"
+    ],
+    "body": [
+      "自己的完整經過",
+      "別人選出的亮點"
+    ],
+    "visual": "film",
+    "stage": 0,
+    "originalTitle": "維度錯位：自己完整版 vs 別人精華版",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：別拿自己的幕後花絮，去比別人的預告片。",
+      "STORY": "24小時母帶與2分鐘預告是比喻，不是時間使用研究。被剪掉的猶豫、修改和等待，不會因為沒出現在畫面裡就消失。",
+      "POINT": "自己的完整經過；別人選出的亮點",
+      "TRANSITION": "接著進入：寫下一件，別人不知道的挫敗。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 12,
+    "kind": "write",
+    "title": [
+      "寫下一件，別人不知道的挫敗"
+    ],
+    "body": [
+      "這件事是＿＿＿＿＿＿"
+    ],
+    "visual": "paper",
+    "stage": 0,
+    "originalTitle": "現場互動：水下冰山書寫",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：寫下一件，別人不知道的挫敗",
+      "STORY": "保留一分鐘，案例可以很小，也可以不寫、不分享。不要要求公開創傷或隱私。這張紙之後會用在第五講。",
+      "POINT": "這件事是＿＿＿＿＿＿",
+      "TRANSITION": "接著進入：把「他很順」改成一個問題。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 13,
+    "kind": "contrast",
+    "title": [
+      "把「他很順」改成一個問題"
+    ],
+    "body": [
+      "他經歷了什麼，",
+      "是我還沒看見的？"
+    ],
+    "visual": "hidden",
+    "stage": 0,
+    "originalTitle": "重新定義「別人很順」",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：把「他很順」改成一個問題",
+      "STORY": "不把「高手」重新神化成重啟最快的人。你不知道的可能是失敗，也可能是資源、協助或時機；用問題取代能力定論。",
+      "POINT": "他經歷了什麼，；是我還沒看見的？",
+      "TRANSITION": "接著進入：你看到的只是結果，不是整個過程。你沒看到，不代表它沒有發生。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 14,
+    "kind": "quote",
+    "title": [
+      "你看到的只是結果，",
+      "不是整個過程。",
+      "你沒看到，不代表它沒有發生。"
+    ],
+    "body": [],
+    "visual": "iceberg",
+    "stage": 0,
+    "originalTitle": "第一講核心金句",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：你看到的只是結果，不是整個過程。你沒看到，不代表它沒有發生。",
+      "STORY": "放慢速度，讀完後停頓。這句話提醒我們限制比較的範圍，不主張所有成功背後必定有同等數量的失敗。",
+      "POINT": "你看到的只是結果，不是整個過程。你沒看到，不代表它沒有發生。",
+      "TRANSITION": "接著進入：知道大家都會失敗，就能從失敗中學會嗎？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 15,
+    "kind": "question",
+    "title": [
+      "知道大家都會失敗，",
+      "就能從失敗中學會嗎？"
+    ],
+    "body": [
+      "完全不一定。"
+    ],
+    "visual": "parcel",
+    "stage": 0,
+    "originalTitle": "第一講懸念頁",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：知道大家都會失敗，就能從失敗中學會嗎？",
+      "STORY": "第一講讓我們不再只看水面，但看見失敗不等於理解失敗。下一講從一個二選一的回饋任務開始。",
+      "POINT": "完全不一定。",
+      "TRANSITION": "接著進入：02 讀懂失敗。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 16,
+    "kind": "chapter",
+    "title": [
+      "02 讀懂失敗"
+    ],
+    "body": [
+      "為什麼失敗了，反而學不到？"
+    ],
+    "visual": "parcel",
+    "stage": 2,
+    "originalTitle": "第二講封面",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：02 讀懂失敗",
+      "STORY": "本講先揭露讀懂的障礙，不要求現在就把情緒放下。真正重新閱讀資料的場景會在第三講出現。",
+      "POINT": "為什麼失敗了，反而學不到？",
+      "TRANSITION": "接著進入：失敗為成功之母？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 17,
+    "kind": "question",
+    "title": [
+      "失敗為成功之母？"
+    ],
+    "body": [
+      "中間省略了什麼？"
+    ],
+    "visual": "parcel",
+    "stage": 2,
+    "originalTitle": "傳統迷思拷問",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：失敗為成功之母？",
+      "STORY": "讓格言停在問號上。受挫本身不保證改善，還需要注意回饋、理解原因與改變下一步。",
+      "POINT": "中間省略了什麼？",
+      "TRANSITION": "接著進入：同一個答案，兩種回饋。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 18,
+    "kind": "experiment",
+    "title": [
+      "同一個答案，兩種回饋"
+    ],
+    "body": [
+      "A 太陽",
+      "B 水流"
+    ],
+    "visual": "experiment",
+    "stage": 2,
+    "originalTitle": "經典實驗現場模擬：二選一猜題",
+    "notes": {
+      "OPEN": "假設這個符號只有兩種可能。猜A或B，接著比較收到的訊息。",
+      "STORY": "這是受二選一研究啟發的教學示意，符號是課程自製，沒有真正古文字含義。假設正解A，選A獲告知正確、選B獲告知錯誤，都能推出A。可點選後比較回饋，不把現場結果當正式實驗。",
+      "POINT": "A 太陽；B 水流",
+      "TRANSITION": "接著進入：失敗回饋，未必帶來較多學習。",
+      "SOURCE": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744. https://doi.org/10.1177/0956797619881133"
+    },
+    "citation": "Eskreis-Winkler & Fishbach, 2019 · Psychological Science",
+    "sourceId": "failure"
+  },
+  {
+    "id": 19,
+    "kind": "research",
+    "title": [
+      "失敗回饋，未必帶來較多學習"
+    ],
+    "body": [
+      "二選一任務",
+      "成功或失敗回饋",
+      "後續再測"
+    ],
+    "visual": "study",
+    "stage": 2,
+    "originalTitle": "權威學術文獻依據",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：失敗回饋，未必帶來較多學習",
+      "STORY": "2019年論文報告五項研究，總樣本1,674，已核對。畫面不必靠數字製造權威感。結論限於研究任務與條件，不等於人類不能從任何失敗中學習。",
+      "POINT": "二選一任務；成功或失敗回饋；後續再測",
+      "TRANSITION": "接著進入：資訊相同，學習未必相同。",
+      "SOURCE": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744. https://doi.org/10.1177/0956797619881133"
+    },
+    "citation": "Eskreis-Winkler & Fishbach, 2019 · Psychological Science",
+    "sourceId": "failure"
+  },
+  {
+    "id": 20,
+    "kind": "result",
+    "title": [
+      "資訊相同，學習未必相同"
+    ],
+    "body": [
+      "這些實驗中，",
+      "失敗回饋組學得較少。"
+    ],
+    "visual": "result",
+    "stage": 2,
+    "originalTitle": "令人震驚的研究發現",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：資訊相同，學習未必相同",
+      "STORY": "用方向性比較，不畫沒有原始數據的柱狀圖。刪除失敗組一律降到50%、完全記不住和短暫失去能力的泛化。這不是每個人的固定反應。",
+      "POINT": "這些實驗中，；失敗回饋組學得較少。",
+      "TRANSITION": "接著進入：同一個包裹，兩樣東西。。",
+      "SOURCE": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744. https://doi.org/10.1177/0956797619881133"
+    },
+    "citation": "Eskreis-Winkler & Fishbach, 2019 · Psychological Science",
+    "sourceId": "failure"
+  },
+  {
+    "id": 21,
+    "kind": "hero",
+    "title": [
+      "同一個包裹，兩樣東西。"
+    ],
+    "body": [],
+    "visual": "parcel",
+    "stage": 2,
+    "originalTitle": "Hero Visual 02：FAILURE 包裹",
+    "notes": {
+      "OPEN": "打開這個包裹，你先看見的是哪一樣？",
+      "STORY": "箱子打開，資料紙與鏡子依次出現。留意主角的目光如何轉向鏡子。這是對研究機制的視覺化，不是腦部活動測量。",
+      "POINT": "同一個包裹，兩樣東西。",
+      "TRANSITION": "接著進入：資訊，還是自我評價？。",
+      "SOURCE": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744. https://doi.org/10.1177/0956797619881133"
+    },
+    "citation": "Eskreis-Winkler & Fishbach, 2019 · Psychological Science",
+    "sourceId": "failure"
+  },
+  {
+    "id": 22,
+    "kind": "contrast",
+    "title": [
+      "資訊，還是自我評價？"
+    ],
+    "body": [
+      "這個方法哪裡卡住？",
+      "我是不是很差？"
+    ],
+    "visual": "mirror",
+    "stage": 2,
+    "originalTitle": "雙重產物的爭奪戰",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：資訊，還是自我評價？",
+      "STORY": "兩個問題都可能伴隨失敗出現。不要說失敗永遠只有兩個成分；它也可能帶來真實損失與外在限制。",
+      "POINT": "這個方法哪裡卡住？；我是不是很差？",
+      "TRANSITION": "接著進入：問題不是失敗沒有資訊。是我們沒有在看它。。",
+      "SOURCE": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744. https://doi.org/10.1177/0956797619881133"
+    },
+    "citation": "Eskreis-Winkler & Fishbach, 2019 · Psychological Science",
+    "sourceId": "failure"
+  },
+  {
+    "id": 23,
+    "kind": "mirror",
+    "title": [
+      "問題不是失敗沒有資訊。",
+      "是我們沒有在看它。"
+    ],
+    "body": [],
+    "visual": "mirror",
+    "stage": 2,
+    "originalTitle": "神經防衛機制：Tune Out（分心拔插頭）",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：問題不是失敗沒有資訊。是我們沒有在看它。",
+      "STORY": "追蹤注意力：資料在眼前，自我評價卻吸走目光。論文提出自我威脅與注意轉移的解釋，不能把它說成大腦關機或與肉體疼痛共用某腦區的證明。",
+      "POINT": "問題不是失敗沒有資訊。是我們沒有在看它。",
+      "TRANSITION": "接著進入：注意力如何離開資料。",
+      "SOURCE": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744. https://doi.org/10.1177/0956797619881133"
+    },
+    "citation": "Eskreis-Winkler & Fishbach, 2019 · Psychological Science",
+    "sourceId": "failure"
+  },
+  {
+    "id": 24,
+    "kind": "flow",
+    "title": [
+      "注意力如何離開資料"
+    ],
+    "body": [
+      "失敗",
+      "自我威脅",
+      "移開注意力",
+      "資訊未處理",
+      "較少學習"
+    ],
+    "visual": "flow",
+    "stage": 2,
+    "originalTitle": "核心流程圖：失敗阻斷學習路徑",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：注意力如何離開資料",
+      "STORY": "這是概念路徑，並非每個人都必然走完整條鏈。最後一格是較少學習，而非完全沒有學習。詢問觀眾在哪一格最有感。",
+      "POINT": "失敗；自我威脅；移開注意力；資訊未處理；較少學習",
+      "TRANSITION": "接著進入：換成別人的失敗呢？。",
+      "SOURCE": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744. https://doi.org/10.1177/0956797619881133"
+    },
+    "citation": "Eskreis-Winkler & Fishbach, 2019 · Psychological Science",
+    "sourceId": "failure"
+  },
+  {
+    "id": 25,
+    "kind": "research",
+    "title": [
+      "換成別人的失敗呢？"
+    ],
+    "body": [
+      "研究中的旁觀者，",
+      "也能從失敗回饋學習。"
+    ],
+    "visual": "observer",
+    "stage": 2,
+    "originalTitle": "反直覺發現：旁觀者的學習奇蹟",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：換成別人的失敗呢？",
+      "STORY": "同篇論文的觀察他人回饋條件提供了比較。這支持自我威脅可能是障礙之一，不代表別人的失敗對所有人都沒有情緒或一定學得快。",
+      "POINT": "研究中的旁觀者，；也能從失敗回饋學習。",
+      "TRANSITION": "接著進入：把人格判決，改寫成事件。",
+      "SOURCE": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744. https://doi.org/10.1177/0956797619881133"
+    },
+    "citation": "Eskreis-Winkler & Fishbach, 2019 · Psychological Science",
+    "sourceId": "failure"
+  },
+  {
+    "id": 26,
+    "kind": "contrast",
+    "title": [
+      "把人格判決，改寫成事件"
+    ],
+    "body": [
+      "我是個沒用的人",
+      "這次方法沒有達到預期"
+    ],
+    "visual": "paper",
+    "stage": 2,
+    "originalTitle": "心智昇華：把失敗降維成資料",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：把人格判決，改寫成事件",
+      "STORY": "保留人的尊嚴，也保留情緒。把語句改成具體事件，才有地方檢查方法、環境和資源，並非把人當作機器。",
+      "POINT": "我是個沒用的人；這次方法沒有達到預期",
+      "TRANSITION": "接著進入：失敗帶來的資料，被讀懂之後，才可能成為老師。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 27,
+    "kind": "quote",
+    "title": [
+      "失敗帶來的資料，",
+      "被讀懂之後，",
+      "才可能成為老師。"
+    ],
+    "body": [],
+    "visual": "parcel",
+    "stage": 2,
+    "originalTitle": "第二講核心金句",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：失敗帶來的資料，被讀懂之後，才可能成為老師。",
+      "STORY": "保留原稿的資料與老師隱喻，但不用「只是資料」否定損失和痛苦。停頓，讓聽眾想一件還沒有讀懂的事。",
+      "POINT": "失敗帶來的資料，被讀懂之後，才可能成為老師。",
+      "TRANSITION": "接著進入：一個正在痛苦的人，真的能立刻分析嗎？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 28,
+    "kind": "question",
+    "title": [
+      "一個正在痛苦的人，",
+      "真的能立刻分析嗎？"
+    ],
+    "body": [
+      "先別急著要求振作。"
+    ],
+    "visual": "rain",
+    "stage": 2,
+    "originalTitle": "第二講懸念頁",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：一個正在痛苦的人，真的能立刻分析嗎？",
+      "STORY": "第二講的懸念不是要求意志力更強，而是問：怎樣才有空間把注意力移回來？",
+      "POINT": "先別急著要求振作。",
+      "TRANSITION": "接著進入：03 承受失敗。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 29,
+    "kind": "chapter",
+    "title": [
+      "03 承受失敗"
+    ],
+    "body": [
+      "失敗之後，先別急著振作"
+    ],
+    "visual": "rain",
+    "stage": 1,
+    "originalTitle": "第三講封面",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：03 承受失敗",
+      "STORY": "這一講給情緒留位置。承受不等於一直停在原地，而是辨認此刻是否適合分析與做決定。",
+      "POINT": "失敗之後，先別急著振作",
+      "TRANSITION": "接著進入：那些熟悉的安慰。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 30,
+    "kind": "voices",
+    "title": [
+      "那些熟悉的安慰"
+    ],
+    "body": [
+      "沒關係啦。",
+      "想開一點。",
+      "下次再努力就好。"
+    ],
+    "visual": "voices",
+    "stage": 1,
+    "originalTitle": "耳熟能詳的安慰三件套",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：那些熟悉的安慰",
+      "STORY": "輕聲讀出，不嘲笑說話的人。這些話可能出於善意，但當事人此刻需要的也許是被理解。",
+      "POINT": "沒關係啦。；想開一點。；下次再努力就好。",
+      "TRANSITION": "接著進入：不是錯，是太早了。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 31,
+    "kind": "quote",
+    "title": [
+      "不是錯，",
+      "是太早了。"
+    ],
+    "body": [],
+    "visual": "rain",
+    "stage": 1,
+    "originalTitle": "反直覺提問：這些安慰錯在哪裡？",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：不是錯，是太早了。",
+      "STORY": "刪除原稿的激烈標籤。試著改問：你現在想被聽見，還是想一起想辦法？不要假設所有安慰都無效。",
+      "POINT": "不是錯，是太早了。",
+      "TRANSITION": "接著進入：痛苦，可能有兩層。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 32,
+    "kind": "layers",
+    "title": [
+      "痛苦，可能有兩層"
+    ],
+    "body": [
+      "事情沒有成",
+      "我開始懷疑自己"
+    ],
+    "visual": "layers",
+    "stage": 1,
+    "originalTitle": "痛苦源頭拆解：事件層面 vs 身分層面",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：痛苦，可能有兩層",
+      "STORY": "表層損失本身也可能很沉重。不能斷言身分威脅永遠比事件更重要。請聽眾分辨目前最痛的是哪一部分。",
+      "POINT": "事情沒有成；我開始懷疑自己",
+      "TRANSITION": "接著進入：不是沒有路。是你現在還看不清楚。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 33,
+    "kind": "hero",
+    "title": [
+      "不是沒有路。",
+      "是你現在還看不清楚。"
+    ],
+    "body": [],
+    "visual": "rain",
+    "stage": 1,
+    "originalTitle": "Hero Visual 03：暴雨之窗",
+    "notes": {
+      "OPEN": "現在不必找路，先坐一下。",
+      "STORY": "主角坐在窗前握著杯子，外面道路被雨遮住。這是承受情緒的場景比喻；杯子和等待不是治療處方。",
+      "POINT": "不是沒有路。是你現在還看不清楚。",
+      "TRANSITION": "接著進入：風暴佔據了注意力。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 34,
+    "kind": "attention",
+    "title": [
+      "風暴佔據了注意力"
+    ],
+    "body": [
+      "情緒反應",
+      "反芻",
+      "自我防衛",
+      "分析與規劃"
+    ],
+    "visual": "attention",
+    "stage": 1,
+    "originalTitle": "神經生物學：前額葉的頻寬危機",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：風暴佔據了注意力",
+      "STORY": "容器表示有限的心理空間，大小分配是概念隱喻而非實證百分比。不標100、不標任何腦區缺血。核心句：不是現在沒有答案，是現在沒有足夠的心理空間找答案。",
+      "POINT": "情緒反應；反芻；自我防衛；分析與規劃",
+      "TRANSITION": "接著進入：先留出空間，再回頭閱讀。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 35,
+    "kind": "flow",
+    "title": [
+      "先留出空間，再回頭閱讀"
+    ],
+    "body": [
+      "承受與安放",
+      "情緒緩和",
+      "回看資訊"
+    ],
+    "visual": "flow",
+    "stage": 1,
+    "originalTitle": "正確的心理緩衝路徑",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：先留出空間，再回頭閱讀",
+      "STORY": "這是一條可嘗試的處理路徑，不是不可跳過的生理法則。有人能一邊難受一邊分析，有人需要更多時間，兩者都不應被評判。",
+      "POINT": "承受與安放；情緒緩和；回看資訊",
+      "TRANSITION": "接著進入：這次最讓我難受的是什麼？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 36,
+    "kind": "labels",
+    "title": [
+      "這次最讓我難受的是什麼？"
+    ],
+    "body": [
+      "失落",
+      "羞恥",
+      "失控",
+      "恐懼"
+    ],
+    "visual": "labels",
+    "stage": 1,
+    "originalTitle": "現場練習：指認痛點（Affect Labeling）",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：這次最讓我難受的是什麼？",
+      "STORY": "Lieberman等人在情緒圖片標記任務中發現，相較其他編碼條件，情緒標記與較低杏仁核反應及較高右腹外側前額葉活動有關。不可轉譯成說出自己的情緒就立即下降30%。現場可選詞或補上自己的詞，不保證立刻舒服。",
+      "POINT": "失落；羞恥；失控；恐懼",
+      "TRANSITION": "接著進入：讓想法與自己，留一點距離。",
+      "SOURCE": "Lieberman, M. D., Eisenberger, N. I., Crockett, M. J., Tom, S. M., Pfeifer, J. H., & Way, B. M. (2007). Putting feelings into words: Affect labeling disrupts amygdala activity in response to affective stimuli. Psychological Science, 18(5), 421–428. https://doi.org/10.1111/j.1467-9280.2007.01916.x"
+    },
+    "citation": "Lieberman et al., 2007 · Psychological Science",
+    "sourceId": "affect"
+  },
+  {
+    "id": 37,
+    "kind": "contrast",
+    "title": [
+      "讓想法與自己，留一點距離"
+    ],
+    "body": [
+      "我是個失敗者",
+      "我注意到，我正這樣想"
+    ],
+    "visual": "paper",
+    "stage": 1,
+    "originalTitle": "認知解離（Cognitive Defusion）",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：讓想法與自己，留一點距離",
+      "STORY": "用語言練習觀察想法，不把想法當作身分判決。補一句：我遭遇了一次挫敗。這是課程練習，不宣稱單靠換句話就能消除痛苦。",
+      "POINT": "我是個失敗者；我注意到，我正這樣想",
+      "TRANSITION": "接著進入：視線，開始恢復。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 38,
+    "kind": "wiper",
+    "title": [
+      "視線，開始恢復"
+    ],
+    "body": [
+      "我能談經過了。",
+      "我開始問：哪裡卡住？"
+    ],
+    "visual": "wiper",
+    "stage": 1,
+    "originalTitle": "雨勢漸止的信號",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：視線，開始恢復",
+      "STORY": "雨刷逐次讓道路顯露。這兩點是自我觀察提示，不是診斷指標；不需要等到完全沒有情緒才做任何事。",
+      "POINT": "我能談經過了。；我開始問：哪裡卡住？",
+      "TRANSITION": "接著進入：現在，把鏡子移開。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 39,
+    "kind": "hero",
+    "title": [
+      "現在，把鏡子移開。"
+    ],
+    "body": [],
+    "visual": "reopen",
+    "stage": 2,
+    "originalTitle": "重新打開包裹",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：現在，把鏡子移開。",
+      "STORY": "回到第二講未讀的資料。主角把鏡子放低、重新拿起紙。這裡才真正完成讀懂的轉折，讓五講順序與六步模型接上。",
+      "POINT": "現在，把鏡子移開。",
+      "TRANSITION": "接著進入：情緒需要被承接，學習也需要空間。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 40,
+    "kind": "quote",
+    "title": [
+      "情緒需要被承接，",
+      "學習也需要空間。"
+    ],
+    "body": [],
+    "visual": "rain",
+    "stage": 2,
+    "originalTitle": "第三講核心金句",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：情緒需要被承接，學習也需要空間。",
+      "STORY": "原稿的必經之路改成較開放的表述。不同人有不同處理節奏，不以是否迅速平靜評價成熟程度。",
+      "POINT": "情緒需要被承接，學習也需要空間。",
+      "TRANSITION": "接著進入：情緒緩和之後，就一定要再試一次？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 41,
+    "kind": "question",
+    "title": [
+      "情緒緩和之後，",
+      "就一定要再試一次？"
+    ],
+    "body": [
+      "誰說一定要？"
+    ],
+    "visual": "crossroad",
+    "stage": 3,
+    "originalTitle": "傳統迷思第二擊",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：情緒緩和之後，就一定要再試一次？",
+      "STORY": "讓問題停留。處理情緒是為了看清選項，不是為了把自己送回原本的死路。",
+      "POINT": "誰說一定要？",
+      "TRANSITION": "接著進入：前面的山路已斷，繼續走，還是重新判斷？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 42,
+    "kind": "question",
+    "title": [
+      "前面的山路已斷，",
+      "繼續走，還是重新判斷？"
+    ],
+    "body": [],
+    "visual": "crossroad",
+    "stage": 3,
+    "originalTitle": "第三講懸念頁",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：前面的山路已斷，繼續走，還是重新判斷？",
+      "STORY": "用斷路引出第四講。不要把未能抽離的人指責為固執，目標可能承載責任、認同或現實限制。",
+      "POINT": "前面的山路已斷，繼續走，還是重新判斷？",
+      "TRANSITION": "接著進入：04 判斷失敗。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 43,
+    "kind": "chapter",
+    "title": [
+      "04 判斷失敗"
+    ],
+    "body": [
+      "再試一次，不一定是最好的答案"
+    ],
+    "visual": "crossroad",
+    "stage": 3,
+    "originalTitle": "第四講封面",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：04 判斷失敗",
+      "STORY": "接下來區分目標與方法，討論值得繼續、需要換路與需要放下的條件。",
+      "POINT": "再試一次，不一定是最好的答案",
+      "TRANSITION": "接著進入：堅持，可能通往不同結局。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 44,
+    "kind": "routes",
+    "title": [
+      "堅持，可能通往不同結局"
+    ],
+    "body": [
+      "再試，有了新資訊",
+      "再試，只在重複消耗"
+    ],
+    "visual": "routes",
+    "stage": 3,
+    "originalTitle": "兩種現實劇本",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：堅持，可能通往不同結局",
+      "STORY": "兩個劇本都是示例，不預測必然成功或滅頂。請比較條件有沒有改變、是否取得新資訊、代價是否可承擔。",
+      "POINT": "再試，有了新資訊；再試，只在重複消耗",
+      "TRANSITION": "接著進入：我還在追求目標，還是在保護原來的決定？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 45,
+    "kind": "question",
+    "title": [
+      "我還在追求目標，",
+      "還是在保護原來的決定？"
+    ],
+    "body": [],
+    "visual": "crossroad",
+    "stage": 3,
+    "originalTitle": "深刻逼問：毅力還是困住？",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：我還在追求目標，還是在保護原來的決定？",
+      "STORY": "用溫和提問取代戳痛他人的語氣。承認方法可能失效，不等於承認自己沒有價值。",
+      "POINT": "我還在追求目標，還是在保護原來的決定？",
+      "TRANSITION": "接著進入：行動危機。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 46,
+    "kind": "research",
+    "title": [
+      "行動危機"
+    ],
+    "body": [
+      "繼續追求",
+      "抽離目標"
+    ],
+    "visual": "crisis",
+    "stage": 3,
+    "originalTitle": "學術理論：Action Crisis（行動危機）",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：行動危機",
+      "STORY": "Brandstätter、Herrmann與Schüler（2013）將行動危機描述為繼續追求與抽離目標間的內在衝突。原稿題名、期刊、卷頁錯誤，已改為PSPB 39(12),1668–1682。不把它簡化為失敗次數多，也不把關聯寫成對所有人的因果結論。",
+      "POINT": "繼續追求；抽離目標",
+      "TRANSITION": "接著進入：可是，我已經投入這麼多……。",
+      "SOURCE": "Brandstätter, V., Herrmann, M., & Schüler, J. (2013). The struggle of giving up personal goals: Affective, physiological, and cognitive consequences of an action crisis. Personality and Social Psychology Bulletin, 39(12), 1668–1682. https://doi.org/10.1177/0146167213500151"
+    },
+    "citation": "Brandstätter et al., 2013 · Personality and Social Psychology Bulletin",
+    "sourceId": "crisis"
+  },
+  {
+    "id": 47,
+    "kind": "sunk",
+    "title": [
+      "可是，我已經投入這麼多……"
+    ],
+    "body": [
+      "已經付出的",
+      "接下來值得的"
+    ],
+    "visual": "sunk",
+    "stage": 3,
+    "originalTitle": "決策偏誤：沉沒成本謬誤",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：可是，我已經投入這麼多……",
+      "STORY": "Arkes與Blumer的研究討論投入如何使人更傾向繼續。判斷應看未來可預期的代價、收益與責任；並非所有過去經驗都沒有價值，可回收資源也不是沉沒成本。",
+      "POINT": "已經付出的；接下來值得的",
+      "TRANSITION": "接著進入：換路，不等於換目的地。。",
+      "SOURCE": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35(1), 124–140. https://doi.org/10.1016/0749-5978(85)90049-4"
+    },
+    "citation": "Arkes & Blumer, 1985 · Organizational Behavior and Human Decision Processes",
+    "sourceId": "sunk"
+  },
+  {
+    "id": 48,
+    "kind": "hero",
+    "title": [
+      "換路，不等於換目的地。"
+    ],
+    "body": [],
+    "visual": "crossroad",
+    "stage": 3,
+    "originalTitle": "Hero Visual 04：登山岔路口",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：換路，不等於換目的地。",
+      "STORY": "主角站在斷裂山路，兩側仍有其他道路通往山頂。GPS顯示重新規劃。替代路線只是可能性，不能保證每個現實目標一定有可行替代。",
+      "POINT": "換路，不等於換目的地。",
+      "TRANSITION": "接著進入：路線失敗，不等於旅程失敗。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 49,
+    "kind": "gps",
+    "title": [
+      "路線失敗，不等於旅程失敗"
+    ],
+    "body": [
+      "目標：健康",
+      "方法：可以調整"
+    ],
+    "visual": "gps",
+    "stage": 3,
+    "originalTitle": "生活案例拆解：健康目標 vs 跑步方法",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：路線失敗，不等於旅程失敗",
+      "STORY": "保留健康與運動的生活例子。若跑步不適，不推論跑步必然損傷膝蓋，也不替觀眾選醫療處置。重點是活動方式、作息等方法可以評估調整。",
+      "POINT": "目標：健康；方法：可以調整",
+      "TRANSITION": "接著進入：失敗三問。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 50,
+    "kind": "gates",
+    "title": [
+      "失敗三問"
+    ],
+    "body": [
+      "還重要嗎？",
+      "還可行嗎？",
+      "目標，還是方法？"
+    ],
+    "visual": "gates",
+    "stage": 3,
+    "originalTitle": "核心決策工具：失敗三問",
+    "notes": {
+      "OPEN": "帶著自己的案例，一道門一道門走。",
+      "STORY": "讓自己的案例依序穿過三道門。價值、現實條件、目標方法層次分開檢查。這是課程工具，刪除能解決90%糾結的無來源保證。",
+      "POINT": "還重要嗎？；還可行嗎？；目標，還是方法？",
+      "TRANSITION": "接著進入：放手之後，還能往哪裡走？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 51,
+    "kind": "research",
+    "title": [
+      "放手之後，還能往哪裡走？"
+    ],
+    "body": [
+      "Goal Disengagement",
+      "Goal Reengagement"
+    ],
+    "visual": "adjust",
+    "stage": 3,
+    "originalTitle": "學術理論：Goal Adjustment（目標調節）",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：放手之後，還能往哪裡走？",
+      "STORY": "Wrosch等人（2003）的研究發現，從不可達目標抽離及投入其他目標與主觀幸福感有關。不是人人越快放棄越好，也沒有心理健康最高或皮質醇最低的結論。",
+      "POINT": "Goal Disengagement；Goal Reengagement",
+      "TRANSITION": "接著進入：下一步，可以先整理成四個方向。",
+      "SOURCE": "Wrosch, C., Scheier, M. F., Miller, G. E., Schulz, R., & Carver, C. S. (2003). Adaptive self-regulation of unattainable goals: Goal disengagement, goal reengagement, and subjective well-being. Personality and Social Psychology Bulletin, 29(12), 1494–1508. https://doi.org/10.1177/0146167203256921"
+    },
+    "citation": "Wrosch et al., 2003 · Personality and Social Psychology Bulletin",
+    "sourceId": "goal"
+  },
+  {
+    "id": 52,
+    "kind": "directions",
+    "title": [
+      "下一步，可以先整理成四個方向"
+    ],
+    "body": [
+      "繼續",
+      "換方法",
+      "暫停",
+      "換目標"
+    ],
+    "visual": "directions",
+    "stage": 3,
+    "originalTitle": "四種決策矩陣",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：下一步，可以先整理成四個方向",
+      "STORY": "這四方向是本課程整合框架，不是心理學證實所有失敗只有四個答案。選項可組合，也可以隨新資訊重估。",
+      "POINT": "繼續；換方法；暫停；換目標",
+      "TRANSITION": "接著進入：失敗教我們的，也包括判斷：什麼才值得堅持。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 53,
+    "kind": "quote",
+    "title": [
+      "失敗教我們的，",
+      "也包括判斷：",
+      "什麼才值得堅持。"
+    ],
+    "body": [],
+    "visual": "crossroad",
+    "stage": 3,
+    "originalTitle": "第四講核心金句",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：失敗教我們的，也包括判斷：什麼才值得堅持。",
+      "STORY": "保留第四講定錨。請想一個你願意繼續投入的理由，以及一個會讓你改變判斷的條件。",
+      "POINT": "失敗教我們的，也包括判斷：什麼才值得堅持。",
+      "TRANSITION": "接著進入：明天早上，第一步要往哪裡走？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 54,
+    "kind": "question",
+    "title": [
+      "明天早上，",
+      "第一步要往哪裡走？"
+    ],
+    "body": [],
+    "visual": "footprint",
+    "stage": 3,
+    "originalTitle": "第四講懸念頁",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：明天早上，第一步要往哪裡走？",
+      "STORY": "把抽象判斷帶到可觀察行動。下一講使用同一件自己的挫敗，不再新增一堆理論。",
+      "POINT": "明天早上，第一步要往哪裡走？",
+      "TRANSITION": "接著進入：05 重新行動。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 55,
+    "kind": "chapter",
+    "title": [
+      "05 重新行動"
+    ],
+    "body": [
+      "現在，換你操作。"
+    ],
+    "visual": "compass",
+    "stage": 4,
+    "originalTitle": "第五講封面",
+    "notes": {
+      "OPEN": "接下來不用再記我的話，換你處理自己的那件事。",
+      "STORY": "請拿出第12頁的案例，或另選一件可安全分享的小挫折。用紙筆即可，不必把私人內容輸入公開裝置。",
+      "POINT": "現在，換你操作。",
+      "TRANSITION": "接著進入：帶著同一件事，走完這段路。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 56,
+    "kind": "journey",
+    "title": [
+      "帶著同一件事，走完這段路"
+    ],
+    "body": [
+      "冰山",
+      "包裹",
+      "暴雨",
+      "岔路",
+      "羅盤",
+      "腳印"
+    ],
+    "visual": "journey",
+    "stage": 4,
+    "originalTitle": "五講心智旅程全景回顧",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：帶著同一件事，走完這段路",
+      "STORY": "回顧講座敘事順序：先看見，再揭露讀懂障礙，接著承受，然後判斷及行動。操作時依六步模型，可往返，不要求一遍完成。",
+      "POINT": "冰山；包裹；暴雨；岔路；羅盤；腳印",
+      "TRANSITION": "接著進入：先寫可觀察的事實。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 57,
+    "kind": "write",
+    "title": [
+      "先寫可觀察的事實"
+    ],
+    "body": [
+      "我原本想＿＿＿＿，",
+      "但是實際發生＿＿＿＿。"
+    ],
+    "visual": "paper",
+    "stage": 0,
+    "originalTitle": "工具實戰第一步：客觀陳述失敗",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：先寫可觀察的事實",
+      "STORY": "先暫時把評價放旁邊，只寫可觀察的事實。例：我想用邀請信招募參與者，但寄出後未收到回覆。這是虛構教學案例；情緒可另外記下，不被禁止。",
+      "POINT": "我原本想＿＿＿＿，；但是實際發生＿＿＿＿。",
+      "TRANSITION": "接著進入：我真的試夠了嗎？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 58,
+    "kind": "three",
+    "title": [
+      "我真的試夠了嗎？"
+    ],
+    "body": [
+      "我試了幾次？",
+      "這個領域容易成功嗎？",
+      "少量失敗，就是能力定論嗎？"
+    ],
+    "visual": "three",
+    "stage": 0,
+    "originalTitle": "羅盤步驟一：看見檢核",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：我真的試夠了嗎？",
+      "STORY": "不要求一般聽眾計算統計顯著，也沒有通用的最低嘗試次數。沒有基準時先找可靠資訊；增加次數前仍要考慮成本與安全。",
+      "POINT": "我試了幾次？；這個領域容易成功嗎？；少量失敗，就是能力定論嗎？",
+      "TRANSITION": "接著進入：我現在，有空間判斷嗎？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 59,
+    "kind": "write",
+    "title": [
+      "我現在，有空間判斷嗎？"
+    ],
+    "body": [
+      "如果情緒仍很強烈，",
+      "先延後重大決策。"
+    ],
+    "visual": "wiper",
+    "stage": 1,
+    "originalTitle": "羅盤步驟二：承受檢核",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：我現在，有空間判斷嗎？",
+      "STORY": "把需要處理的事與可以延後的決定分開。可以找可信任的人一起討論。沒有統一24小時處方，也不必把任何情緒反應都視為不能行動。",
+      "POINT": "如果情緒仍很強烈，；先延後重大決策。",
+      "TRANSITION": "接著進入：從事件抽出三張資料卡。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 60,
+    "kind": "worksheet",
+    "title": [
+      "從事件抽出三張資料卡"
+    ],
+    "body": [
+      "已知事實",
+      "可能解釋",
+      "還要確認"
+    ],
+    "visual": "paper",
+    "stage": 2,
+    "originalTitle": "羅盤步驟三：讀懂檢核",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：從事件抽出三張資料卡",
+      "STORY": "將事實、假設與未知分開。例：未收到回覆是事實；信太長只是解釋之一；是否寄達仍待確認。不要把第一個猜測當成原因。",
+      "POINT": "已知事實；可能解釋；還要確認",
+      "TRANSITION": "接著進入：目的地，與走法分開寫。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 61,
+    "kind": "write",
+    "title": [
+      "目的地，與走法分開寫"
+    ],
+    "body": [
+      "我要達成＿＿＿＿",
+      "我原本的方法是＿＿＿＿"
+    ],
+    "visual": "crossroad",
+    "stage": 3,
+    "originalTitle": "羅盤步驟四：判斷檢核",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：目的地，與走法分開寫",
+      "STORY": "沿用同一件案例，再用失敗三問檢查。邀請同伴只問澄清問題，不替對方決定人生目標。",
+      "POINT": "我要達成＿＿＿＿；我原本的方法是＿＿＿＿",
+      "TRANSITION": "接著進入：失敗羅盤。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 62,
+    "kind": "compass",
+    "title": [
+      "失敗羅盤"
+    ],
+    "body": [],
+    "visual": "compass",
+    "stage": 4,
+    "originalTitle": "Hero Visual 05：實體《失敗羅盤》（Failure Compass）",
+    "notes": {
+      "OPEN": "這不是替你決定的工具，而是讓你說清楚決定理由的工具。",
+      "STORY": "中央FAIL是一個待判斷的事件，不是身分標籤。依外圈三問選擇方向，記下理由。主角托著羅盤，現在決策權回到使用者手中。",
+      "POINT": "失敗羅盤",
+      "TRANSITION": "接著進入：選一個方向，寫一個動作。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 63,
+    "kind": "directions",
+    "title": [
+      "選一個方向，寫一個動作"
+    ],
+    "body": [
+      "繼續：調整節奏",
+      "換方法：試一個替代",
+      "暫停：訂回看時間",
+      "換目標：投入新方向"
+    ],
+    "visual": "directions",
+    "stage": 4,
+    "originalTitle": "四方指針的具體落地作業標準",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：選一個方向，寫一個動作",
+      "STORY": "取消一律加碼、固定30天與必須告別儀式等硬性規則。請說出下次何時回看，以及哪些新資訊會讓你調整方向。",
+      "POINT": "繼續：調整節奏；換方法：試一個替代；暫停：訂回看時間；換目標：投入新方向",
+      "TRANSITION": "接著進入：「更努力」之後，你具體會做什麼？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 64,
+    "kind": "quote",
+    "title": [
+      "「更努力」之後，",
+      "你具體會做什麼？"
+    ],
+    "body": [],
+    "visual": "paper",
+    "stage": 5,
+    "originalTitle": "行動禁忌：千萬別寫「我要更努力」",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：「更努力」之後，你具體會做什麼？",
+      "STORY": "不羞辱說更努力的人。追問時間、對象、行動和觀察方式，把意願變成一個能開始的步驟。",
+      "POINT": "「更努力」之後，你具體會做什麼？",
+      "TRANSITION": "接著進入：24 小時內，你願意踩出的第一步是什麼？。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 65,
+    "kind": "footprint",
+    "title": [
+      "24 小時內，",
+      "你願意踩出的第一步是什麼？"
+    ],
+    "body": [],
+    "visual": "footprint",
+    "stage": 5,
+    "originalTitle": "降維執行：最小下一步（Minimum Actionable Step）",
+    "notes": {
+      "OPEN": "只選一步。做完之後，你想多知道什麼？",
+      "STORY": "24小時是課程邀請，不是心理學標準。動作要具體、可觀察、短時間能開始並帶回新資訊，小到足以降低啟動阻力，不保證不會失敗。例：請一位同伴讀邀請信，問他是否看得懂希望他做什麼。",
+      "POINT": "24 小時內，你願意踩出的第一步是什麼？",
+      "TRANSITION": "接著進入：重新行動，是為了驗證新的假設。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 66,
+    "kind": "quote",
+    "title": [
+      "重新行動，",
+      "是為了驗證新的假設。"
+    ],
+    "body": [],
+    "visual": "footprint",
+    "stage": 5,
+    "originalTitle": "第五講核心金句",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：重新行動，是為了驗證新的假設。",
+      "STORY": "選一項想知道的事，預先寫下要觀察的回饋。行動不是證明自己沒錯；不論結果如何，都回來修正判斷。",
+      "POINT": "重新行動，是為了驗證新的假設。",
+      "TRANSITION": "接著進入：六步，各自解決一個問題。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 67,
+    "kind": "overview",
+    "title": [
+      "六步，各自解決一個問題"
+    ],
+    "body": [
+      "看見：補回未見",
+      "承受：容納情緒",
+      "讀懂：分清資訊",
+      "判斷：檢查可行",
+      "選擇：決定方向",
+      "行動：取得回饋"
+    ],
+    "visual": "overview",
+    "stage": 5,
+    "originalTitle": "系列總表：《失敗學》完整認知進化鏈",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：六步，各自解決一個問題",
+      "STORY": "這是六步操作順序，不是把第二講與第三講交換。各步是課程整合，會依需要返回前一步，不宣稱嚴格生理因果鏈。",
+      "POINT": "看見：補回未見；承受：容納情緒；讀懂：分清資訊；判斷：檢查可行；選擇：決定方向；行動：取得回饋",
+      "TRANSITION": "接著進入：每次受挫，都能重新定位。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 68,
+    "kind": "poster",
+    "title": [
+      "每次受挫，都能重新定位"
+    ],
+    "body": [
+      "看見",
+      "承受",
+      "讀懂",
+      "判斷",
+      "選擇",
+      "行動"
+    ],
+    "visual": "poster",
+    "stage": 5,
+    "originalTitle": "系統總模型海報（16:9 全景圖）",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：每次受挫，都能重新定位",
+      "STORY": "留時間拍照。六步總模型、三問與四方向放在同一張圖。若仍在高度情緒反應中，可以停在承受，不需要勉強填完。",
+      "POINT": "看見；承受；讀懂；判斷；選擇；行動",
+      "TRANSITION": "接著進入：References。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 69,
+    "kind": "references",
+    "title": [
+      "References"
+    ],
+    "body": [],
+    "visual": "references",
+    "stage": 5,
+    "originalTitle": "學術文獻與理論參考",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：References",
+      "STORY": "這頁列出實際引用的完整書目與DOI，章節及個人文件不假裝是期刊論文。課程框架、案例和插畫另標性質，不混成已驗證理論。",
+      "POINT": "References",
+      "TRANSITION": "接著進入：失敗不是成功之母。。",
+      "SOURCE": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744. https://doi.org/10.1177/0956797619881133\n\nBrandstätter, V., Herrmann, M., & Schüler, J. (2013). The struggle of giving up personal goals: Affective, physiological, and cognitive consequences of an action crisis. Personality and Social Psychology Bulletin, 39(12), 1668–1682. https://doi.org/10.1177/0146167213500151\n\nWrosch, C., Scheier, M. F., Miller, G. E., Schulz, R., & Carver, C. S. (2003). Adaptive self-regulation of unattainable goals: Goal disengagement, goal reengagement, and subjective well-being. Personality and Social Psychology Bulletin, 29(12), 1494–1508. https://doi.org/10.1177/0146167203256921\n\nMiller, D. T., & McFarland, C. (1991). When social comparison goes awry: The case of pluralistic ignorance. In J. Suls & T. A. Wills (Eds.), Social comparison: Contemporary theory and research (pp. 287–313). Lawrence Erlbaum Associates. https://www.gsb.stanford.edu/faculty-research/publications/when-social-comparison-goes-awry-case-pluralistic-ignorance\n\nHaushofer, J. (2016). CV of failures [Personal curriculum vitae]. https://johanneshaushofer.com/Johannes_Haushofer_CV_of_Failures.pdf\n\nLieberman, M. D., Eisenberger, N. I., Crockett, M. J., Tom, S. M., Pfeifer, J. H., & Way, B. M. (2007). Putting feelings into words: Affect labeling disrupts amygdala activity in response to affective stimuli. Psychological Science, 18(5), 421–428. https://doi.org/10.1111/j.1467-9280.2007.01916.x\n\nArkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35(1), 124–140. https://doi.org/10.1016/0749-5978(85)90049-4"
+    }
+  },
+  {
+    "id": 70,
+    "kind": "strike",
+    "title": [
+      "失敗不是成功之母。"
+    ],
+    "body": [
+      "失敗是成功之母"
+    ],
+    "visual": "strike",
+    "stage": 5,
+    "originalTitle": "舊思維劃除（視覺衝擊頁）",
+    "notes": {
+      "OPEN": "以這一頁的核心問題開口：失敗不是成功之母。",
+      "STORY": "先看舊句被劃掉，再讀新句。停三秒，不補勵志解釋，下一張完成全系列命題。",
+      "POINT": "失敗是成功之母",
+      "TRANSITION": "接著進入：被讀懂的失敗，才有可能是。。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  },
+  {
+    "id": 71,
+    "kind": "end",
+    "title": [
+      "被讀懂的失敗，",
+      "才有可能是。"
+    ],
+    "body": [],
+    "visual": "end",
+    "stage": 5,
+    "originalTitle": "系列終章 (全黑背景)",
+    "notes": {
+      "OPEN": "被讀懂的失敗，才有可能是。",
+      "STORY": "讓最後兩行留在全黑畫面。保持安靜，不追加謝謝、Q&A或任何新投影片。",
+      "POINT": "被讀懂的失敗，才有可能是。",
+      "TRANSITION": "停留在此頁，不再追加內容。",
+      "SOURCE": "課程整合／教學示例；不作為研究結論。"
+    }
+  }
+];
+window.DECK_REFS = [
+  {
+    "id": "failure",
+    "short": "Eskreis-Winkler & Fishbach, 2019 · Psychological Science",
+    "apa": "Eskreis-Winkler, L., & Fishbach, A. (2019). Not learning from failure—the greatest failure of all. Psychological Science, 30(12), 1733–1744.",
+    "url": "https://doi.org/10.1177/0956797619881133"
+  },
+  {
+    "id": "crisis",
+    "short": "Brandstätter et al., 2013 · Personality and Social Psychology Bulletin",
+    "apa": "Brandstätter, V., Herrmann, M., & Schüler, J. (2013). The struggle of giving up personal goals: Affective, physiological, and cognitive consequences of an action crisis. Personality and Social Psychology Bulletin, 39(12), 1668–1682.",
+    "url": "https://doi.org/10.1177/0146167213500151"
+  },
+  {
+    "id": "goal",
+    "short": "Wrosch et al., 2003 · Personality and Social Psychology Bulletin",
+    "apa": "Wrosch, C., Scheier, M. F., Miller, G. E., Schulz, R., & Carver, C. S. (2003). Adaptive self-regulation of unattainable goals: Goal disengagement, goal reengagement, and subjective well-being. Personality and Social Psychology Bulletin, 29(12), 1494–1508.",
+    "url": "https://doi.org/10.1177/0146167203256921"
+  },
+  {
+    "id": "plural",
+    "short": "Miller & McFarland, 1991 · Social Comparison（書籍章節）",
+    "apa": "Miller, D. T., & McFarland, C. (1991). When social comparison goes awry: The case of pluralistic ignorance. In J. Suls & T. A. Wills (Eds.), Social comparison: Contemporary theory and research (pp. 287–313). Lawrence Erlbaum Associates.",
+    "url": "https://www.gsb.stanford.edu/faculty-research/publications/when-social-comparison-goes-awry-case-pluralistic-ignorance"
+  },
+  {
+    "id": "cv",
+    "short": "Haushofer, 2016 · CV of Failures（個人文件）",
+    "apa": "Haushofer, J. (2016). CV of failures [Personal curriculum vitae].",
+    "url": "https://johanneshaushofer.com/Johannes_Haushofer_CV_of_Failures.pdf"
+  },
+  {
+    "id": "affect",
+    "short": "Lieberman et al., 2007 · Psychological Science",
+    "apa": "Lieberman, M. D., Eisenberger, N. I., Crockett, M. J., Tom, S. M., Pfeifer, J. H., & Way, B. M. (2007). Putting feelings into words: Affect labeling disrupts amygdala activity in response to affective stimuli. Psychological Science, 18(5), 421–428.",
+    "url": "https://doi.org/10.1111/j.1467-9280.2007.01916.x"
+  },
+  {
+    "id": "sunk",
+    "short": "Arkes & Blumer, 1985 · Organizational Behavior and Human Decision Processes",
+    "apa": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35(1), 124–140.",
+    "url": "https://doi.org/10.1016/0749-5978(85)90049-4"
+  }
+];</script><script>/* All artwork is original, editable SVG. Shared protagonist and scene components. */
+(function(){
+const C={ivory:'#F4F0E8',navy:'#14213D',ink:'#252525',green:'#5F7D68',rust:'#B45F4D',storm:'#53677A',gold:'#B28A4A',pale:'#DCD6C9',skin:'#D2A586'};
+const esc=s=>String(s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const text=(x,y,s,size=36,color=C.ink,weight=400,anchor='start',attrs='')=>`<text x="${x}" y="${y}" fill="${color}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" ${attrs}>${esc(s)}</text>`;
+const lines=(x,y,a,size=64,color=C.ink,weight=700,step=size*1.45,anchor='start')=>a.map((s,i)=>text(x,y+i*step,s,size,color,weight,anchor)).join('');
+const group=(x,y,s,body,extra='')=>`<g transform="translate(${x} ${y}) scale(${s})" ${extra}>${body}</g>`;
+const path=(d,fill,stroke='none',sw=2,extra='')=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${sw}" ${extra}/>`;
+const rect=(x,y,w,h,fill,rx=0,extra='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}" rx="${rx}" ${extra}/>`;
+const line=(x1,y1,x2,y2,color=C.pale,sw=2,extra='')=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${sw}" ${extra}/>`;
+const circle=(x,y,r,fill,extra='')=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" ${extra}/>`;
+function wrap(s,max=54){let a=[],v='',len=0;for(const c of s){const w=c.charCodeAt(0)>255?1:.53;if(len+w>max&&v){a.push(v);v='';len=0;}v+=c;len+=w;}if(v)a.push(v);return a;}
+function wrapWords(s,max){let a=[],line='';for(let w of s.split(' ')){if((line+' '+w).length>max&&line){a.push(line);line='';}line+=(line?' ':'')+w;}if(line)a.push(line);return a;}
+function defs(){return `<defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#486879"/><stop offset="1" stop-color="#14213D"/></linearGradient><linearGradient id="glass" x2="1" y2="1"><stop stop-color="#A7BCC3"/><stop offset="1" stop-color="#53677A"/></linearGradient><linearGradient id="brass" x2="1" y2="1"><stop stop-color="#E1C993"/><stop offset=".45" stop-color="#B28A4A"/><stop offset="1" stop-color="#775B36"/></linearGradient><radialGradient id="light"><stop stop-color="#EFE3BE" stop-opacity=".8"/><stop offset="1" stop-color="#EFE3BE" stop-opacity="0"/></radialGradient><pattern id="rainlines" width="46" height="76" patternUnits="userSpaceOnUse" patternTransform="rotate(15)"><path d="M10 0V36 M32 44V74" stroke="#DAE1E1" stroke-width="2" opacity=".55"/></pattern><pattern id="paperlines" width="100" height="54" patternUnits="userSpaceOnUse"><path d="M0 52H100" stroke="#BFB7A9" stroke-width="1"/></pattern></defs>`}
+function Character(pose='stand',gaze='right'){
+ const head=`<path d="M-22-241Q-35-222-21-194L0-184 22-202 19-236Z" fill="${C.skin}"/><path d="M-26-219Q-41-257-9-263 26-272 29-233L17-215 10-238Q-14-230-26-219" fill="#20252D"/>${line(8,-218,15,-217,'#302821',2)}${path('M15-213L22-208 15-206','none','#765441',1.5)}`;
+ const torso=path('M-20-188L17-188 44-149 33-63-38-63-47-140Z',C.navy)+path('M-8-186L8-186 17-87-17-87Z',C.ivory)+path('M-20-188L-5-151-20-125-27-167Z','#273B55')+path('M17-188L5-151 23-131 31-166Z','#354C64');
+ let limbs=pose==='sit'?path('M-36-68L39-64 91-19 116-5 111 10 76 7 17-26-9-29-17 8-43 8Z','#29323E')+path('M-43 0L-15 0-5 12-47 13Z','#1B2027'):path('M-34-68L33-68 29-10 43 3 41 12 12 12 0-48-9 3-5 12-38 12-41 4-27-5Z','#29323E');
+ let arms=pose==='hold'?path('M-38-164L-59-104-23-91-12-106-36-118-20-159Z',C.navy)+path('M32-164L60-121 106-113 103-98 48-99 17-138Z',C.navy)+path('M103-114L124-113 128-104 103-98Z',C.skin):pose==='sit'?path('M-33-163L-47-110-7-85 1-102-25-124-15-152Z',C.navy)+path('M24-163L44-110 6-86-3-101 24-126Z',C.navy)+rect(-6,-105,23,30,C.ivory,4)+path('M17-100Q35-98 19-84','none',C.ivory,5):path('M-36-162L-61-100-49-57-34-63-42-103-18-151Z',C.navy)+path('M32-158L50-107 46-68 31-72 30-108 15-149Z',C.navy)+circle(-42,-59,8,C.skin)+circle(38,-69,8,C.skin);
+ return `<g class="character" aria-label="深藍外套、米白內搭的同一位年輕亞洲男性">${limbs}${torso}${arms}${head}</g>`;
+}
+function Iceberg(){return `${rect(0,225,1050,390,'url(#sea)')}${circle(820,70,110,'url(#light)')}${path('M320 225L502 35 613 147 678 225Z','#DEE4DF')}${path('M502 35L511 225 320 225Z','#AFBEC0')}${path('M502 35L613 147 576 190Z','#F7F7EC')}<g class="reveal-under">${path('M320 234L678 234 842 354 600 577 452 508 245 368Z','#7C9BA7')}${path('M320 234L511 244 600 577 452 508 245 368Z','#456578')}${path('M511 244L678 234 842 354 600 577Z','#547B8B')}${lines(430,325,['沒被說出的挫折','沒有回音','推倒重來','自我懷疑'],25,'#DCE7E6',400,59)}</g>${line(0,229,1050,229,'#F4F0E8',3)}${path('M0 248L167 232 210 270 182 365 0 403Z','#263D4D')}${group(131,235,.63,Character('sit'))}${line(509,55,509,-5,C.navy,4)}${path('M510-5L577 9 510 24Z',C.green)}${text(695,179,'被看見的成果',26,C.green)}${text(866,589,'視覺隱喻',16,'#DAE1DF')}`}
+function Parcel(mode='open'){
+ let mirror=group(715,80,1,Mirror());if(mode==='reopen')mirror=group(875,394,.60,'<g transform="rotate(76)">'+Mirror()+'</g>');
+ return `${rect(20,553,1020,2,C.pale)}${circle(790,273,242,'url(#light)')}${group(182,548,1.35,Character(mode==='reopen'?'hold':'stand'))}${path('M357 407L515 355 681 409 515 474Z','#C8A676')}${path('M357 407L515 474 515 591 357 523Z','#9B7853')}${path('M515 474L681 409 681 523 515 591Z','#B18C5B')}${text(540,516,'FAILURE',23,'#443626',700,'start','transform="rotate(-20 540 516)"')}<g class="parcel-lid">${path('M357 407L298 344 455 298 515 355Z','#D9BE94')}${path('M515 355L585 289 752 347 681 409Z','#CFB185')}</g><g class="data-paper">${group(mode==='reopen'?320:382,mode==='reopen'?190:205,1,Paper('DATA'))}</g><g class="mirror-arrive">${mirror}</g>${mode==='reopen'?'':path('M210 261Q470 132 780 214','none',C.rust,2,'stroke-dasharray="8 12"')}`}
+function Mirror(){return `${rect(0,0,208,355,C.rust,100)}${rect(13,13,182,323,'url(#glass)',91)}${path('M43 74L153 24M50 155L169 92','none','#CDD8D9',8,'opacity=".4"')}${group(105,315,.7,Character())}${text(104,69,'我是不是',23,C.ivory,700,'middle')}${text(104,106,'很差？',31,C.ivory,700,'middle')}${path('M38 354L21 430M171 354L189 430','none','#79564D',9)}`}
+function Paper(label='DATA'){return `${path('M0 0L176-8 190 220 10 226Z','#FFFD F7'.replace(' ',''),'#C9C0AF',2)}${text(25,50,label,27,C.navy,700)}${[80,110,140,170].map(y=>line(25,y,154,y,C.pale,3)).join('')}`}
+function RainWindow(clear=false){return `${rect(0,0,1060,615,'#283C50')}${rect(288,30,727,522,'url(#glass)',180)}${path('M300 425L465 169 667 417 839 208 1005 455V553H300Z','#6B7D7D')}${path('M579 550Q660 400 673 309Q644 440 733 550Z','#D8D3BC')}${circle(875,152,111,'url(#light)')}<g class="rain-veil ${clear?'clearing':''}">${rect(290,30,725,523,'url(#rainlines)',178)}${rect(289,30,727,523,'#53677A',178,'opacity=".36"')}</g>${path('M283 33V558H1017V33M650 39V554','none','#14213D',15)}${rect(256,552,790,19,'#C6B99B')}${path('M0 614V508L111 491 244 531 283 615Z','#172B40')}${group(143,492,1.23,Character('sit'))}${clear?`<g class="wiper">${path('M654 557L924 191','none','#182C3D',11)}${path('M803 112Q896 171 957 250','none','#182C3D',12)}</g>`:''}${rect(0,592,1060,23,'#1A2D40')}`}
+function Mountain(){return `${circle(744,98,92,'url(#light)')}${path('M0 593L264 186 398 372 649 39 1050 593Z','#C4CBC5')}${path('M249 593L649 39 1050 593Z','#85959A')}${path('M649 39L571 238 651 174 701 230Z','#EEEFE5')}${path('M649 39L676 313 846 593 1050 593Z','#53677A')}${line(649,41,649,-12,C.navy,4)}${path('M650-12L717 0 650 24Z',C.gold)}`}
+function Crossroad(){return `${Mountain()}${path('M0 609L1050 609 997 552 795 549 603 517 512 545 352 509 167 536Z','#BAAF96')}${path('M513 560L520 451 566 395M590 342L614 261 649 188','none',C.ivory,22)}${path('M503 433L558 415 579 446 544 476Z','#374957')}${path('M437 455L581 409','none',C.rust,8)}<g class="alternate-route">${path('M453 556C120 440 346 287 571 261L647 185','none',C.green,12)}${path('M578 556C978 443 861 308 703 254L647 185','none',C.green,9,'stroke-dasharray="14 9"')}</g>${group(477,565,.9,Character())}${line(528,408,565,577,'#755E43',7)}${text(130,390,'B',35,C.green,700)}${text(886,392,'C',35,C.green,700)}${text(719,93,'目標',28,C.navy)}${text(691,575,'RECALCULATING…',20,C.green,700)}`}
+function Compass(){let ticks='';for(let i=0;i<72;i++){let a=i*Math.PI/36;let r=i%6===0?303:315;ticks+=line(500+Math.sin(a)*r,480-Math.cos(a)*r,500+Math.sin(a)*326,480-Math.cos(a)*326,C.gold,i%6===0?3:1)}return `${circle(500,480,382,'url(#brass)')}${circle(500,480,369,C.ivory)}${circle(500,480,339,'none',`stroke="${C.gold}" stroke-width="2"`)}${ticks}${circle(500,480,205,'none',`stroke="${C.pale}" stroke-width="2"`)}${line(500,198,500,762,C.pale,2)}${line(218,480,782,480,C.pale,2)}${text(500,270,'N  繼續',40,C.navy,700,'middle')}${text(500,309,'Continue',22,C.storm,400,'middle')}${text(733,473,'E 換方法',33,C.navy,700,'middle')}${text(733,509,'Pivot',22,C.storm,400,'middle')}${text(500,706,'S  暫停',40,C.navy,700,'middle')}${text(500,742,'Pause',22,C.storm,400,'middle')}${text(270,473,'W 換目標',32,C.navy,700,'middle')}${text(270,509,'Disengage / Redirect',17,C.storm,400,'middle')}<g class="compass-needle" style="transform-origin:500px 480px">${path('M500 321L531 480 500 519 469 480Z',C.rust)}${path('M500 639L531 480 500 441 469 480Z',C.navy)}</g>${circle(500,480,68,C.ivory,`stroke="${C.gold}" stroke-width="2"`)}${text(500,490,'FAIL',29,C.navy,700,'middle')}${text(500,55,'這個目標還重要嗎？',31,C.navy,700,'middle')}${text(500,910,'它現在仍然可行嗎？',31,C.navy,700,'middle')}${text(500,959,'失敗的是目標，還是方法？',31,C.navy,700,'middle')}`}
+function Footprint(){return `${path('M19 0C-28-16-67 24-60 88L-39 178Q-5 196 22 163L34 89Q54 24 19 0Z',C.navy)}${path('M-36 204Q-7 218 17 198L12 254Q-12 280-42 253Z',C.navy)}`}
+function Gates(){return [0,1,2].map((v)=>{let x=130+v*550;return `${path(`M${x} 775V361Q${x+160} 155 ${x+320} 361V775`, 'none',[C.green,C.gold,C.navy][v],16)}${text(x+160,348,['IMPORTANT?','FEASIBLE?','GOAL or METHOD?'][v],29,C.storm,700,'middle')}${lines(x+160,490,[['還重要嗎？'],['還可行嗎？'],['失敗的是目標，','還是方法？']][v],38,C.navy,700,61,'middle')}${v<2?path(`M${x+368} 650H${x+493}M${x+471} 632L${x+493} 650 ${x+471} 668`,'none',C.gold,3):''}`}).join('')+path('M107 831H1790','none',C.pale,3)+circle(140,831,13,C.rust)}
+function NavigationProgress(stage){const en=['SEE','HOLD','READ','JUDGE','CHOOSE','MOVE'],cn=['看見','承受','讀懂','判斷','選擇','行動'];return `<g class="navigation">${line(111,1024,1039,1024,'#A9A99C',1)}${en.map((s,i)=>`${circle(112+i*185,1024,i===stage?5:3,i===stage?C.gold:'#A9A99C')}${text(112+i*185,1054,s+' '+cn[i],17,i===stage?C.gold:'#8C908B',i===stage?700:400)}`).join('')}</g>`}
+function Poster(){
+ const labs=['看見','承受','讀懂','判斷','選擇','行動'],des=['補回未見的經過','先安放情緒','分清事實與假設','重要？可行？','選擇下一個方向','帶回新的資訊'];
+ const icons=[Iceberg,RainWindow,Parcel,Crossroad,Compass,Footprint];let a='';
+ for(let i=0;i<6;i++){let x=185+i*307;let art=icons[i]().replace(/<text[^>]*>[\s\S]*?<\/text>/g,'');a+=text(x,287,String(i+1).padStart(2,'0'),23,C.gold,700,'middle');a+=group(i===5?x:x-110,327,i===4?.22:i===5?.47:.21,art);a+=text(x,582,labs[i],49,C.navy,700,'middle')+text(x,631,des[i],23,C.storm,400,'middle')+circle(x,685,9,C.gold);if(i<5)a+=path(`M${x+22} 685H${x+270}M${x+257} 676L${x+270} 685 ${x+257} 694`,'none',C.gold,2);}
+ return a+path('M1720 708V747H186V711','none',C.pale,2)+text(925,742,'取得回饋，再次判斷',22,C.storm,400,'middle')+line(110,790,1810,790,C.pale,2)+text(110,844,'三問',26,C.gold,700)+text(237,844,'還重要嗎？    還可行嗎？    目標，還是方法？',29,C.navy)+text(110,911,'四向',26,C.gold,700)+text(237,911,'繼續    ／    換方法    ／    暫停    ／    換目標',29,C.navy)+text(110,965,'課程整合工具，可依需要往返使用。',19,C.storm)+group(1720,958,.47,Character('hold'));
+}
+function DecisionCard(x,y,index,title,sub){return `${line(x,y,x+735,y,C.gold,2)}${text(x,y+75,index,31,C.gold,700)}${text(x+90,y+77,title,51,C.navy,700)}${text(x+90,y+135,sub,28,C.storm)}`}
+function QuoteSlide(s,dark=false){return `${lines(140,410,s.title,82,dark?C.ivory:C.navy,700,130)}${s.body.length?lines(145,800,s.body,35,dark?'#C8C7BD':C.storm,400,50):''}`}
+function ResearchCitation(s){return s.citation?text(1800,982,s.citation,18,C.storm,400,'end'):''}
+function scene(name){return ({iceberg:Iceberg,parcel:Parcel,mirror:Parcel,rain:RainWindow,wiper:()=>RainWindow(true),crossroad:Crossroad,compass:Compass,footprint:Footprint,reopen:()=>Parcel('reopen')})[name]?.()||Paper()}
+function render(s,refs=[]){
+ let dark=[1,29,31,33,40,71].includes(s.id),bg=s.id===1||s.id===71?'#000000':dark?C.navy:C.ivory,ink=dark?C.ivory:C.navy;let b='';
+ const title=()=>lines(110,164,s.title,62,ink,700,82);
+ if(s.kind==='cover')b=text(126,169,'FAILURE STUDIES',26,C.gold,700)+text(110,529,s.title[0],184,C.ivory,700)+lines(125,690,s.body,44,'#DDDCD3',400,69)+text(128,965,'五講完整認知體系',23,C.gold)+group(1630,530,.8,Footprint());
+ else if(s.kind==='end')b=lines(960,500,s.title,93,C.ivory,500,146,'middle');
+ else if(s.kind==='chapter'){
+ const special=s.visual==='compass';b=text(112,162,'失敗學  /  '+s.title[0].slice(0,2),24,C.gold,700)+lines(110,384,s.title,75,ink,700)+lines(115,493,s.body,35,dark?'#CDCFCB':C.storm,400,53)+group(special?955:800,special?220:325,special?.64:.96,scene(s.visual));
+ }
+ else if(s.kind==='hero'||s.kind==='mirror')b=lines(110,154,s.title,s.id===23?56:61,ink,700,81)+group(310,s.id===23?302:260,1.22,scene(s.visual));
+ else if(s.kind==='quote'||s.kind==='question'){
+ b=QuoteSlide(s,dark);if(s.kind==='question')b+=text(1660,740,'?',235,dark?'#53677A':'#CFC7B7',400,'middle');
+ }
+ else if(s.kind==='journey'){
+ b=title();const display=s.id===2?['看見','承受','讀懂','判斷','選擇','行動']:s.body;
+ const mini=s.id===2?[Iceberg,RainWindow,Parcel,Crossroad,Compass,Footprint]:[Iceberg,Parcel,RainWindow,Crossroad,Compass,Footprint];
+ display.forEach((v,i)=>{let x=140+i*294;b+=text(x,328,String(i+1).padStart(2,'0'),24,C.gold,700);b+=group(x,385,i===4?.19:i===5?.5:.23,mini[i]());b+=text(x,681,v,39,ink,700);if(i<5)b+=line(x+150,668,x+254,668,C.gold,2)});
+ b+=text(110,869,s.id===2?'第二講先揭露「讀不到」的障礙；第三講承受之後，再回頭讀懂。':'講座先揭露障礙，再處理情緒；操作時依六步往返。',29,C.storm);
+ }
+ else if(s.kind==='contrast'){
+ b=title();if(s.id===5){b+=text(110,402,'公開的結果',46,C.green,700)+lines(110,512,['錄取','得獎','出版'],47,C.navy,400,89)+text(1060,402,'未公開的經過',46,C.storm,700)+lines(1060,512,['沒有回音','一再修改','自我懷疑'],47,C.storm,400,89)+line(937,325,937,852,C.pale,2)}
+ else if(s.id===22){b+=group(210,350,1.7,Paper())+group(1260,306,1.3,Mirror())+text(230,836,s.body[0],39,C.navy,700)+text(1210,910,s.body[1],39,C.rust,700)}
+ else {b+=text(120,412,s.id===13?'先不急著下結論':'原本的說法',25,C.storm);b+=lines(120,512,wrap(s.body[0],17),58,C.storm,500,89);b+=path('M870 566H1000M977 545L1000 566 977 587','none',C.gold,3);b+=lines(1070,512,wrap(s.body[1]||'我還沒看見的經過',15),54,C.navy,700,83);b+=line(120,730,735,730,C.pale,2)+line(1070,730,1760,730,C.gold,3)}
+ }
+ else if(s.kind==='signals')b=title()+text(200,489,'公開',54,C.green,700)+path('M440 470Q715 245 920 470Q715 695 440 470','none',C.green,4)+text(1070,489,'被放大的成果',44,C.navy)+text(200,758,'私下',54,C.storm,700)+line(440,741,920,741,C.storm,2,'stroke-dasharray="4 14"')+text(1070,758,'尚未說出的挫折',44,C.storm);
+ else if(s.kind==='three'){
+ b=title();s.body.forEach((v,i)=>{let x=118+i*587;b+=text(x,408,String(i+1).padStart(2,'0'),102,C.pale,500)+lines(x,569,wrap(v,10),46,C.navy,700,73)+line(x,819,x+450,819,[C.green,C.gold,C.rust][i],4)});
+ }
+ else if(s.kind==='document')b=title()+group(190,314,2.3,Paper('CV'))+text(953,380,'Johannes Haushofer',48,C.navy,700)+lines(953,477,['沒有錄取的學程','沒有獲得的職位','遭到退回的論文'],40,C.storm,400,82)+text(954,817,'一個人的紀錄，不是全體學者的統計。',27,C.storm);
+ else if(s.kind==='film'){
+ b=title();[0,1].forEach(i=>{let x=110+i*890;b+=rect(x,377,810,320,C.navy);for(let k=0;k<10;k++)b+=rect(x+12+k*80,386,42,14,C.ivory)+rect(x+12+k*80,670,42,14,C.ivory);b+=group(x+210,633,.73,Character('sit'));b+=text(x+396,546,i?'2 MIN':'24 H',79,C.ivory,700)+text(x+25,777,s.body[i],37,C.navy,700)});b+=text(110,921,'時間長度為比喻，非研究數據。',19,C.storm)
+ }
+ else if(s.kind==='experiment'){
+ b=title()+path('M842 320L960 244 1078 320 960 396ZM842 320V453L960 529 1078 453V320','none',C.gold,10)+text(960,598,'自製符號 · 二選一示意',25,C.storm,400,'middle');
+ ['A  太陽','B  水流'].forEach((v,i)=>b+=`<g class="choice" role="button" tabindex="0" data-choice="${i?'B':'A'}" aria-label="選擇${v}">${rect(460+i*565,677,435,131,C.navy,3)}${text(676+i*565,760,v,48,C.ivory,700,'middle')}</g>`);
+ b+=text(960,910,'選一個答案，再比較兩種回饋。',29,C.storm,400,'middle');
+ }
+ else if(s.kind==='research'){
+ b=title();if(s.id===8){for(let i=0;i<4;i++)b+=group(330+i*400,760,1.15,Character())+text(330+i*400,379,'只有我嗎？',29,C.storm,400,'middle');b+=text(960,904,'把別人的沉默，誤讀成從容。',40,C.navy,700,'middle')}
+ else if(s.id===19){b+=text(113,424,'QUESTION',24,C.gold,700)+text(113,505,'失敗回饋，能幫助記住答案嗎？',49,C.navy,700);s.body.forEach((v,i)=>b+=text(140+i*570,757,v,42,C.storm)+ (i<2?path(`M${495+i*570} 737H${620+i*570}`,'none',C.gold,3):''));b+=text(110,916,'結果：在這些任務中，失敗回饋帶來較少學習。',34,C.navy)}
+ else if(s.id===25){b+=group(200,844,1.6,Character())+group(874,330,1.4,Paper('回饋'))+path('M288 452Q527 345 853 427','none',C.gold,3)+lines(1290,513,['換個觀察位置','也能學到資訊'],38,C.navy,700,71)}
+ else if(s.id===46){b+=group(804,390,.8,Crossroad())+lines(110,468,['繼續追求','還是抽離目標？'],52,C.navy,700,93)+text(110,764,'兩者之間的內在衝突',33,C.storm)}
+ else {b+=lines(116,421,['從不可達目標抽離','重新投入有意義的目標'],45,C.navy,700,98)+lines(115,722,['與較佳主觀幸福感有關','並非保證，也不是越快放棄越好'],29,C.storm,400,53)+group(1130,484,.64,Crossroad())}
+ }
+ else if(s.kind==='result')b=title()+text(110,421,'成功回饋',51,C.green,700)+text(110,518,'失敗回饋',51,C.rust,700)+path('M516 424H689V529H516','none',C.gold,4)+lines(810,448,['後續測驗中','失敗回饋組學得較少'],58,C.navy,700,95)+text(110,815,'方向性摘要，未繪製假定分數或效果量。',24,C.storm);
+ else if(s.kind==='flow'){
+ b=title();let a=s.body;let n=a.length;let width=1640/n;a.forEach((v,i)=>{let x=133+i*width;b+=circle(x+83,460,55,i===n-1?C.gold:C.pale)+text(x+83,473,String(i+1),35,C.navy,700,'middle')+lines(x,623,wrap(v,n>3?6:11),n>3?34:43,C.navy,700,57);if(i<n-1)b+=path(`M${x+149} 460H${x+width-13}M${x+width-30} 448L${x+width-13} 460 ${x+width-30} 472`,'none',C.gold,2)});b+=text(110,894,'概念路徑，可依個人狀態往返。',24,C.storm)
+ }
+ else if(s.kind==='voices')b=title()+text(167,452,s.body[0],78,C.storm,500)+text(841,603,s.body[1],78,C.storm,500)+text(365,819,s.body[2],78,C.navy,700);
+ else if(s.kind==='layers')b=title()+path('M224 408L960 276 1712 408 960 551Z','#CCD4CB')+text(960,437,s.body[0],47,C.navy,700,'middle')+path('M224 642L960 510 1712 642 960 785Z',C.storm)+text(960,674,s.body[1],47,C.ivory,700,'middle')+text(960,919,'損失與自我評價，都值得被看見。',30,C.storm,400,'middle');
+ else if(s.kind==='attention'){
+ b=title()+rect(113,324,979,513,'none',18,`stroke="${C.storm}" stroke-width="3"`)+rect(131,342,943,120,C.storm,8)+rect(131,478,589,191,C.rust,8)+rect(736,478,338,191,C.gold,8)+rect(131,685,943,134,'#E0E4D9',8)+text(165,419,s.body[0],43,C.ivory,700)+text(165,592,s.body[1],43,C.ivory,700)+text(770,592,s.body[2],36,C.ivory,700)+text(165,769,s.body[3],36,C.navy)+lines(1208,458,['不是現在沒有答案。','是現在沒有足夠的','心理空間找答案。'],34,C.navy,700,73)+text(113,905,'心理空間示意，圖形比例不是實證數值。',23,C.storm)
+ }
+ else if(s.kind==='labels'){
+ b=title();s.body.forEach((v,i)=>{let x=153+i*432;b+=line(x,359,x+283,359,C.gold,3)+text(x,498,v,78,C.navy,700)});b+=lines(151,729,['研究中的情緒標記，與較低杏仁核反應及較高前額葉活動有關。','情緒圖片實驗，不代表每個人說出感受後都會立刻平靜。'],30,C.storm,400,61)
+ }
+ else if(s.kind==='wiper')b=title()+group(395,267,1.00,RainWindow(true))+text(110,923,s.body.join('  '),31,C.storm);
+ else if(s.kind==='routes')b=title()+path('M147 450C416 305 617 643 854 410S1370 285 1741 333','none',C.green,13)+path('M147 691C412 546 447 873 789 705S1295 951 1738 806','none',C.rust,13)+text(126,356,s.body[0],40,C.green,700)+text(126,894,s.body[1],40,C.rust,700);
+ else if(s.kind==='sunk')b=title()+rect(111,369,721,386,C.pale)+text(155,451,'已投入',29,C.storm)+lines(155,557,['時間','心力','金錢'],42,C.storm,400,62)+path('M968 294V866','none',C.gold,3)+text(1070,479,'從現在起',29,C.gold,700)+lines(1070,602,['還值得投入什麼？','可能換回什麼？'],52,C.navy,700,98);
+ else if(s.kind==='gps')b=title()+group(710,310,1.01,Crossroad())+lines(110,415,s.body,43,C.navy,700,77)+text(110,731,'RECALCULATING…',28,C.green,700);
+ else if(s.kind==='gates')b=title()+Gates()+text(110,929,'課程決策工具',21,C.storm);
+ else if(s.kind==='directions'){
+ b=title();let labels=s.id===63?s.body.map(v=>v.split('：')):[['繼續','條件值得，調整節奏'],['換方法','保留目標，試別的走法'],['暫停','先補資訊，再回看'],['換目標','重新投入有意義的方向']];labels.forEach((v,i)=>b+=DecisionCard(110+(i%2)*880,321+Math.floor(i/2)*299,['N','E','S','W'][i],v[0],v[1]));b+=text(110,945,'課程整合的基本方向，可組合、可重新評估。',22,C.storm)
+ }
+ else if(s.kind==='compass')b=text(109,172,'失敗羅盤',68,C.navy,700)+text(111,231,'FAILURE COMPASS',25,C.gold,700)+group(846,69,.88,Compass())+group(375,839,1.7,Character('hold'))+circle(570,661,62,'url(#brass)')+text(570,671,'FAIL',19,C.navy,700,'middle');
+ else if(s.kind==='write'){
+ b=title()+rect(110,366,1660,472,'url(#paperlines)')+lines(150,466,s.body,55,C.navy,500,112)+text(151,912,s.id===12?'只寫給自己看，也可以選擇略過。':'寫在自己的紙上；先保留答案，再往下走。',25,C.storm);
+ }
+ else if(s.kind==='worksheet'){
+ b=title();s.body.forEach((v,i)=>{let x=112+i*578;b+=rect(x,338,510,514,'#FFFCF6',0,`stroke="${C.pale}" stroke-width="2"`)+text(x+31,411,v,40,C.navy,700)+rect(x+31,459,448,339,'url(#paperlines)')});b+=text(112,927,'同一件事，先分清楚哪些已知、哪些仍待驗證。',28,C.storm)
+ }
+ else if(s.kind==='footprint')b=lines(110,296,s.title,72,C.navy,700,111)+group(1460,585,.76,Footprint(),'class="first-step"')+text(110,926,'課程邀請：具體、可觀察、能開始，並帶回新資訊。',26,C.storm);
+ else if(s.kind==='overview'){
+ b=title();s.body.forEach((v,i)=>{let x=110+(i%3)*600,y=358+Math.floor(i/3)*293;let [a,z]=v.split('：');b+=text(x,y,String(i+1).padStart(2,'0'),28,C.gold,700)+text(x,y+75,a,58,C.navy,700)+text(x,y+132,z,34,C.storm)+line(x,y+172,x+490,y+172,C.pale,2)})
+ }
+ else if(s.kind==='poster')b=title()+Poster();
+ else if(s.kind==='references'){
+ b=title();refs.forEach((r,i)=>{let x=i<4?110:1000,y=272+(i<4?i:i-4)*173;let aa=wrapWords(r.apa,73);b+=text(x,y,String(i+1).padStart(2,'0'),20,C.gold,700)+lines(x+44,y,aa,20,C.ink,400,27)+text(x+44,y+aa.length*27+8,r.url.startsWith('https://doi')?r.url.replace('https://doi.org/','DOI: '):r.id==='cv'?'johanneshaushofer.com · CV of failures':'Stanford GSB · 書籍章節',18,C.storm)});b+=text(1000,921,'書目連結與完整講稿見 notes／修訂稿。',21,C.storm)
+ }
+ else if(s.kind==='strike')b=text(960,420,s.body[0],99,C.storm,500,'middle')+path('M303 386L1616 439','none',C.rust,13,'class="strike-line"')+text(960,677,s.title[0],105,C.navy,700,'middle');
+ else b=title()+lines(110,440,s.body,48,C.navy,500,78);
+ if(s.id>=3&&s.id<71)b+=NavigationProgress(s.stage);
+ if(s.id!==71)b+=text(1800,1054,String(s.id).padStart(2,'0')+' / 71',19,dark?'#C4C9C6':C.storm,400,'end')+ResearchCitation(s);
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-labelledby="slide-title-${s.id}" data-slide="${s.id}" style="font-family:'Microsoft JhengHei','Noto Sans TC',Arial,sans-serif"><title id="slide-title-${s.id}">${esc(s.title.join(''))}</title>${defs()}${rect(0,0,1920,1080,bg)}${b}</svg>`;
+}
+window.DeckArt={C,text,lines,defs,Character,Iceberg,Parcel,Mirror,RainWindow,Mountain,Crossroad,Compass,Footprint,NavigationProgress,QuoteSlide,ResearchCitation,DecisionCard,Poster,render};
+})();
+</script><script>(function(){
+'use strict';const data=window.DECK_DATA,refs=window.DECK_REFS,$=id=>document.getElementById(id);let current=0,presenter=null,hideTimer;const isPresenter=new URLSearchParams(location.search).has('presenter');
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function show(n,notify=true){current=Math.max(0,Math.min(70,Number.isFinite(n)?n:0));const s=data[current];$('stage').innerHTML=DeckArt.render(s,refs);$('page').value=current+1;$('prev').disabled=current===0;$('next').disabled=current===70;document.body.classList.toggle('ending',current===70);$('feedback').hidden=true;document.title=`${String(s.id).padStart(2,'0')} · ${s.title.join('')}｜失敗學`;
+$('notesBody').innerHTML='<h2>'+s.id+' · '+esc(s.title.join(''))+'</h2>'+Object.entries(s.notes).map(([k,v])=>'<h3>'+k+'</h3><p>'+esc(v)+'</p>').join('');const ref=refs.find(r=>r.id===s.sourceId);if(ref)$('notesBody').innerHTML+='<p><a target="_blank" rel="noopener" href="'+esc(ref.url)+'">開啟原始來源</a></p>';
+try{history.replaceState(null,'','#'+s.id)}catch(e){}if(notify){if(presenter&&!presenter.closed)presenter.postMessage({type:'failure-slide',index:current},'*');if(isPresenter&&window.opener)window.opener.postMessage({type:'failure-slide',index:current},'*')}document.querySelectorAll('.choice').forEach(el=>{el.onclick=()=>feedback(el.dataset.choice);el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();feedback(el.dataset.choice)}}});}
+function feedback(choice){$('feedback').hidden=false;$('feedback').innerHTML='<strong>假設正解是 A</strong><br>'+(choice==='A'?'你選了 A，收到「答對」回饋。':'你選了 B，收到「答錯」回饋。')+'<br>兩種回饋都能推知 A；這是教學示意。<button id="dismissFeedback">回到畫面</button>';$('dismissFeedback').onclick=()=>$('feedback').hidden=true;$('dismissFeedback').focus()}
+function closeAll(){$('notes').hidden=!isPresenter;for(const id of ['help','overview'])if($(id).open)$(id).close();$('feedback').hidden=true}
+function toggleNotes(){$('notes').hidden=!$('notes').hidden}
+function full(){if(document.fullscreenElement)document.exitFullscreen?.();else document.documentElement.requestFullscreen?.().catch(()=>{})}
+function openPresenter(){presenter=window.open(location.pathname+'?presenter=1#'+(current+1),'failure-presenter','width=1300,height=850');}
+function overview(){$('grid').innerHTML=data.map((s,i)=>`<button data-index="${i}" class="${i===current?'active':''}"><small>SLIDE ${String(s.id).padStart(2,'0')}</small>${esc(s.title.join(''))}</button>`).join('');$('overview').showModal();$('grid').querySelectorAll('button').forEach(b=>b.onclick=()=>{show(+b.dataset.index);$('overview').close()})}
+$('prev').onclick=()=>show(current-1);$('next').onclick=()=>show(current+1);$('page').onchange=e=>show(parseInt(e.target.value,10)-1);$('fullButton').onclick=full;$('notesButton').onclick=toggleNotes;$('presenterButton').onclick=openPresenter;$('gridButton').onclick=overview;$('helpButton').onclick=()=>$('help').showModal();document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>{let el=$(b.dataset.close);if(el.tagName==='DIALOG')el.close();else el.hidden=true});
+document.addEventListener('keydown',e=>{if(e.target.matches('input,textarea,select,[contenteditable]'))return;if(e.key==='Escape'){closeAll();return}if($('overview').open||$('help').open)return;if(!e.target.closest('.choice'))switch(e.key){case'ArrowRight':case'PageDown':case' ':e.preventDefault();show(current+1);break;case'ArrowLeft':case'PageUp':e.preventDefault();show(current-1);break;case'Home':e.preventDefault();show(0);break;case'End':e.preventDefault();show(70);break;case'f':case'F':full();break;case'n':case'N':toggleNotes();break;case'p':case'P':openPresenter();break;case'g':case'G':overview();break;case'h':case'H':$('help').showModal();break;case'r':case'R':show(current);break;}});
+document.addEventListener('pointermove',()=>{document.body.classList.add('show-controls');clearTimeout(hideTimer);hideTimer=setTimeout(()=>document.body.classList.remove('show-controls'),1800)});
+window.addEventListener('message',e=>{if(e.source!==presenter&&!(isPresenter&&e.source===window.opener))return;if(e.data?.type==='failure-slide'&&Number.isInteger(e.data.index))show(e.data.index,false)});window.addEventListener('hashchange',()=>show((parseInt(location.hash.slice(1),10)||1)-1));
+window.addEventListener('beforeprint',()=>{$('printDeck').innerHTML=data.map(s=>DeckArt.render(s,refs)).join('')});window.addEventListener('afterprint',()=>{$('printDeck').innerHTML=''});
+if(isPresenter){document.body.classList.add('presenter');$('notes').hidden=false}show((parseInt(location.hash.slice(1),10)||1)-1);window.failureDeck={show:(n)=>show(n-1),get current(){return current+1},data,refs};
+})();
+</script></body></html>
