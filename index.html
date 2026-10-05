@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Failure Lab｜失敗學互動實驗室</title>
+<style>
+:root{--bg:#f4f1ea;--ink:#171717;--muted:#706c64;--paper:#fffdf8;--line:#ded8cd;--accent:#ff6b4a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif}
+.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:950;letter-spacing:.04em}.nav a{color:inherit;text-decoration:none;font-weight:700}
+.hero{min-height:74vh;display:grid;grid-template-columns:1.12fr .88fr;gap:44px;align-items:center;padding:56px 0 76px}.eyebrow{font-size:14px;font-weight:900;letter-spacing:.2em;color:var(--accent)}
+h1{font-size:clamp(56px,9vw,108px);line-height:.88;letter-spacing:-.06em;margin:18px 0 28px}.hero p{font-size:clamp(19px,2.2vw,25px);line-height:1.7;color:var(--muted);max-width:720px}
+.btn{display:inline-block;background:var(--ink);color:white;text-decoration:none;padding:16px 24px;border-radius:999px;font-weight:900;margin-top:12px}
+.visual{aspect-ratio:1;border-radius:50%;background:conic-gradient(hsl(0 78% 52%),hsl(60 78% 52%),hsl(120 78% 52%),hsl(180 78% 52%),hsl(240 78% 52%),hsl(300 78% 52%),hsl(360 78% 52%));position:relative;box-shadow:0 30px 80px #0002}
+.visual:after{content:"錯誤不是終點\A而是距離";white-space:pre;position:absolute;inset:22%;border-radius:50%;background:var(--paper);display:grid;place-items:center;text-align:center;font-size:clamp(20px,3vw,34px);font-weight:950;line-height:1.35}
+section{padding:80px 0}.section-title{font-size:clamp(36px,5vw,58px);letter-spacing:-.04em;margin:0 0 18px}.lead{font-size:20px;line-height:1.8;color:var(--muted);max-width:780px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:40px}.step{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 18px;min-height:145px}.step b{font-size:28px}.step p{font-size:15px;color:var(--muted);line-height:1.5}
+.labs{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:38px}.lab{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:30px;min-height:300px;display:flex;flex-direction:column}.tag{font-size:13px;font-weight:900;letter-spacing:.13em;color:var(--accent)}.lab h3{font-size:32px;margin:12px 0}.lab p{color:var(--muted);font-size:17px;line-height:1.65}.lab a{margin-top:auto;color:var(--ink);font-weight:900;text-decoration:none}.soon{opacity:.55}
+.quote{background:var(--ink);color:white;border-radius:34px;padding:clamp(34px,6vw,72px);font-size:clamp(30px,5vw,58px);font-weight:950;line-height:1.25;letter-spacing:-.035em}.quote span{color:#bdb8af}
+.bridge{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}.panel{border-top:2px solid var(--ink);padding-top:20px}.panel h3{font-size:25px}.panel p{color:var(--muted);line-height:1.7}
+footer{padding:48px 0 70px;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:760px){.hero{grid-template-columns:1fr;min-height:auto}.visual{width:min(82vw,430px);margin:auto}.flow{grid-template-columns:1fr 1fr}.labs,.bridge{grid-template-columns:1fr}.hero{padding-top:35px}h1{font-size:64px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="nav"><div class="brand">FAILURE LAB</div><a href="#labs">開始實驗 ↓</a></nav>
+<header class="hero">
+<div>
+<div class="eyebrow">失敗學互動實驗室</div>
+<h1>失敗，<br>可以被看見。</h1>
+<p>我們常把失敗當成一個結果：答錯了、沒做到、沒成功。但如果「錯誤」其實是一筆資訊呢？Failure Lab 把心理學研究變成可以親自操作的實驗，讓你看見自己如何犯錯、得到回饋，然後更新。</p>
+<a class="btn" href="#labs">進入 Failure Lab</a>
+</div>
+<div class="visual"></div>
+</header>
+
+<section>
+<div class="eyebrow">HOW IT WORKS</div>
+<h2 class="section-title">不是聽失敗學。<br>是親自經歷一次。</h2>
+<p class="lead">每一個 Lab 都對應《失敗學》簡報的一個核心概念。先體驗，再揭曉研究，最後把結果帶回自己的學習與生活。</p>
+<div class="flow">
+<div class="step"><b>01</b><p>提出一個你還不知道答案的問題。</p></div>
+<div class="step"><b>02</b><p>先預測，留下自己的判斷。</p></div>
+<div class="step"><b>03</b><p>親自嘗試，也允許自己犯錯。</p></div>
+<div class="step"><b>04</b><p>看見回饋與自己的資料。</p></div>
+<div class="step"><b>05</b><p>揭曉研究，把錯誤轉成下一步。</p></div>
+</div>
+</section>
+
+<section id="labs">
+<div class="eyebrow">EXPERIMENTS</div>
+<h2 class="section-title">今天，要犯哪一種錯？</h2>
+<div class="labs">
+<article class="lab">
+<div class="tag">LAB #01 · COLOR MEMORY</div>
+<h3>錯誤有多遠？</h3>
+<p>看一個顏色 3 秒，憑記憶從色環找回它。你會發現：錯誤不是只有「對／錯」，它還有距離。得到正確答案後，你下一次會修正多少？</p>
+<a href="color-memory/index.html">開始色彩記憶實驗 →</a>
+</article>
+<article class="lab soon">
+<div class="tag">LAB #02 · COMING SOON</div>
+<h3>六張圖卡</h3>
+<p>當失敗已經把線索放在你面前，我們真的會利用它嗎？從排列、猜測與回饋中，看見自己如何處理失敗資訊。</p>
+<a href="javascript:void(0)">開發中</a>
+</article>
+<article class="lab soon">
+<div class="tag">LAB #03 · COMING SOON</div>
+<h3>如果是你，你會怎麼建議？</h3>
+<p>面對自己的失敗很難，但當我們改成替別人提供建議，會發生什麼事？</p>
+<a href="javascript:void(0)">開發中</a>
+</article>
+<article class="lab soon">
+<div class="tag">LAB #04 · COMING SOON</div>
+<h3>你看見多少失敗？</h3>
+<p>我們看到的世界，成功是不是比失敗更容易被看見？從 Failure Gap 重新理解「大家好像都比我成功」。</p>
+<a href="javascript:void(0)">開發中</a>
+</article>
+</div>
+</section>
+
+<section>
+<div class="quote">「錯誤不是判決，<br><span>而是資訊。</span>」</div>
+</section>
+
+<section>
+<div class="eyebrow">FROM SLIDES TO EXPERIENCE</div>
+<h2 class="section-title">每個網頁，都要回到《失敗學》。</h2>
+<div class="bridge">
+<div class="panel"><h3>簡報裡</h3><p>先提出問題與情境，不急著告訴學生研究結論。讓「我想知道答案」先發生。</p></div>
+<div class="panel"><h3>實驗裡</h3><p>學生自己留下預測、錯誤與修正資料。研究不再只是別人的數字，而是自己的經驗。</p></div>
+<div class="panel"><h3>揭曉時</h3><p>回到心理學研究：我們剛剛觀察到的現象，研究者怎麼測量？證據真正支持到哪裡？</p></div>
+<div class="panel"><h3>離開前</h3><p>帶走一句可以使用的原則，而不是一個分數：失敗的價值，在於它有沒有成為下一次行動的資訊。</p></div>
+</div>
+</section>
+
+
+<section id="lab01-conclusion">
+<div class="eyebrow">LAB #01 · DEBRIEF</div>
+<h2 class="section-title">所以，剛剛的錯誤告訴了你什麼？</h2>
+<p class="lead">你第一次選的顏色和正確答案之間，不只是「答錯了」而已。它形成了一個可以測量的<strong>誤差距離</strong>。當正確答案出現，這個差距就可能成為下一次更新的訊號。</p>
+<div class="bridge">
+<div class="panel"><h3>① 錯誤有大小</h3><p>同樣都是答錯，差 10° 和差 100° 並不是同一件事。錯誤可以被看成「目前的我」與「目標」之間的距離。</p></div>
+<div class="panel"><h3>② 回饋讓距離被看見</h3><p>如果只知道「錯了」，資訊很少；當你同時看見自己的答案與正確答案，就更清楚下一步該往哪裡修正。</p></div>
+<div class="panel"><h3>③ 錯誤可以成為更新訊號</h3><p>2026 年相關研究指出，錯誤幅度與後續記憶更新之間存在關聯。但這不等於「錯越大越好」；真正重要的是錯誤之後是否得到可利用的回饋。</p></div>
+<div class="panel"><h3>④ 失敗學帶走什麼？</h3><p><strong>失敗的價值，不在失敗本身，而在於它有沒有變成下一次行動的資訊。</strong></p></div>
+</div>
+<div class="quote" style="margin-top:42px">錯誤 → 回饋 → 更新 → 再嘗試<br><span>這才是「從失敗中學習」。</span></div>
+<p class="lead" style="margin-top:28px">回到《失敗學》簡報時，可以問全班：<strong>「第一次錯很多的人，第二次一定進步比較多嗎？」</strong>先讓學生用自己的經驗回答，再揭曉研究結果與全班資料。</p>
+<a class="btn" href="#labs">看看其他 Failure Lab</a>
+</section>
+
+<footer><b>Failure Lab｜失敗學互動實驗室</b><br><br>把失敗從結果，變成資訊。把研究從投影片，變成親身經驗。</footer>
+</div>
+</body></html>
